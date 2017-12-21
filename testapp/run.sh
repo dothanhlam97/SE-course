@@ -1,1 +1,1 @@
-java -cp "target/dependency/*:target/testapp-0.1.jar" com.bioturing.lam.App
+java -cp "target/dependency/*:target/testapp-0.1.jar" com.test.lam.App

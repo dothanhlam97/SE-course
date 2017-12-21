@@ -1,4 +1,4 @@
-package com.bioturing.lam;
+package com.test.lam;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
