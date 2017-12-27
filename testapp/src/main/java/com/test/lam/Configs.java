@@ -10,7 +10,7 @@ public class Configs {
     }
 
     public Preferences prefs;
-
+    
     private static class LazyConfigsHolder {
         private static final Configs INSTANCE = new Configs();
     }

@@ -1,3 +1,29 @@
 <html>
-    HIHIHIHI
+    <header>
+        <link href="../css/global.css" rel="stylesheet" type="text/css" />
+    </header>
+    <div style="height: 100%">
+        <div class="container">
+            <div class="group">
+                <label> Name
+                </label>
+                <input type="text"></input>
+            </div>
+
+            <div class="group">
+                <label> Password
+                </label>
+                <input type="password"></input>
+            </div>
+
+            <div style="margin-top: 10px;">
+                <button>
+                    Sign up
+                </button>
+                <button>
+                    Log in
+                </button>
+            </div>
+        </div>
+    </div>
 </html>
