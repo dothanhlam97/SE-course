@@ -1,0 +1,16 @@
+<div class="header-block row" style="margin: 0 15px;">
+  <!--div class="col-md-2">
+      <img src="$host_url/images/logo.svg" style="margin-top: 10%; height: 50%;">
+  </div>
+  <div class="col-md-5 pull-left group" style="margin-top: 15px;">
+    <span class="header-button" style="font-weight: bold; color: grey;"> Hire Freelancer </span>
+    <span class="header-button" style="font-weight: bold; color: grey;"> Find Work </span>
+  </div>
+  <div class="col-md-5 pull-right group">
+    <span class="header-button"> Login </span>
+    <span class="header-button"> Sign up </span>
+    <button class="btn btn-blue header-button">
+      Post your project
+    </button>
+  </div-->
+</div>

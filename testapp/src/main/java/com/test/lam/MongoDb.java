@@ -8,7 +8,7 @@ import com.mongodb.MongoCredential;
 public class MongoDb {
 
     private Configs oConfigs = Configs.getInstance();
-    private MongoClient oClient; // ????? 
+    private static MongoClient oClient; // ????? 
 
     private static class MongoDbModelHolder {
         private static final MongoDb INSTANCE = new MongoDb();
@@ -29,17 +29,20 @@ public class MongoDb {
     public static void connectDb() {
 
         // Creating a Mongo client 
-        MongoClient mongo = new MongoClient("localhost", 8080);
+        // MongoClient mongo = new MongoClient("localhost", 8080);
+        oClient = new MongoClient("localhost", 8080);
 
         // Creating Credentials 
         MongoCredential credential = MongoCredential.createCredential("sampleUser", "myDb", "password".toCharArray());
         System.out.println("Connected to the database successfully");
 
         // Accessing the database 
-        MongoDatabase database = mongo.getDatabase("myDb");
+        MongoDatabase database = oClient.getDatabase("test");
         System.out.println("Credentials ::" + credential);
 
         // create database 
         MongoDb.getInstance().createIndex(); 
+        System.out.println("Database:");
+        System.out.print(database);
     }
 }
