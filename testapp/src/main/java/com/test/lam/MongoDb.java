@@ -18,12 +18,16 @@ public class MongoDb {
         return MongoDbModelHolder.INSTANCE;
     }
 
+    public MongoClient getClient() {
+        return oClient;
+    }
+
     public void createIndex() {
-        // try {
-        //     oClient.getDatabase("test");
-        // } catch (Exception ex) {
-        //     ex.printStackTrace();
-        // }
+        try {
+            System.out.print(oClient.getDatabase("accounts"));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     public static void connectDb() {

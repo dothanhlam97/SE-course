@@ -1,0 +1,48 @@
+public abstract interface MongoDatabase {
+  
+  public abstract java.lang.String getName();
+  
+  public abstract org.bson.codecs.configuration.CodecRegistry getCodecRegistry();
+  
+  public abstract com.mongodb.ReadPreference getReadPreference();
+  
+  public abstract com.mongodb.WriteConcern getWriteConcern();
+  
+  public abstract com.mongodb.ReadConcern getReadConcern();
+  
+  public abstract com.mongodb.client.MongoDatabase withCodecRegistry(org.bson.codecs.configuration.CodecRegistry arg0);
+  
+  public abstract com.mongodb.client.MongoDatabase withReadPreference(com.mongodb.ReadPreference arg0);
+  
+  public abstract com.mongodb.client.MongoDatabase withWriteConcern(com.mongodb.WriteConcern arg0);
+  
+  public abstract com.mongodb.client.MongoDatabase withReadConcern(com.mongodb.ReadConcern arg0);
+  
+  public abstract  com.mongodb.client.MongoCollection<org.bson.Document> getCollection(java.lang.String arg0);
+  
+  public abstract <TDocument> com.mongodb.client.MongoCollection<TDocument> getCollection(java.lang.String arg0, java.lang.Class<TDocument> arg1);
+  
+  public abstract org.bson.Document runCommand(org.bson.conversions.Bson arg0);
+  
+  public abstract org.bson.Document runCommand(org.bson.conversions.Bson arg0, com.mongodb.ReadPreference arg1);
+  
+  public abstract <TResult> TResult runCommand(org.bson.conversions.Bson arg0, java.lang.Class<TResult> arg1);
+  
+  public abstract <TResult> TResult runCommand(org.bson.conversions.Bson arg0, com.mongodb.ReadPreference arg1, java.lang.Class<TResult> arg2);
+  
+  public abstract void drop();
+  
+  public abstract  com.mongodb.client.MongoIterable<java.lang.String> listCollectionNames();
+  
+  public abstract  com.mongodb.client.ListCollectionsIterable<org.bson.Document> listCollections();
+  
+  public abstract <TResult> com.mongodb.client.ListCollectionsIterable<TResult> listCollections(java.lang.Class<TResult> arg0);
+  
+  public abstract void createCollection(java.lang.String arg0);
+  
+  public abstract void createCollection(java.lang.String arg0, com.mongodb.client.model.CreateCollectionOptions arg1);
+  
+  public abstract  void createView(java.lang.String arg0, java.lang.String arg1, java.util.List<? extends org.bson.conversions.Bson> arg2);
+  
+  public abstract  void createView(java.lang.String arg0, java.lang.String arg1, java.util.List<? extends org.bson.conversions.Bson> arg2, com.mongodb.client.model.CreateViewOptions arg3);
+}

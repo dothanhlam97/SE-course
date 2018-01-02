@@ -6,6 +6,7 @@ import java.util.Map;
 import spark.ModelAndView;
 import spark.template.velocity.*;
 import org.apache.velocity.app.*;
+// import com.google.gson.Gson;
 
 public class ViewUtil {
     // singleton 
@@ -61,5 +62,14 @@ public class ViewUtil {
         //     configuredEngine.setProperty("file.resource.loader.modificationCheckInterval", -1);
         // }
         return new VelocityTemplateEngine(configuredEngine);
+    }
+
+    public static String sendJsonContent(Request request, Response response, Object model) {
+        // String jsonData = new Gson().toJson(model);
+        Configs oConfigs = Configs.getInstance();
+        response.header("Server", oConfigs.prefs.node("global").get("server_name", "BioTuring"));
+        response.header("Content-Type", "application/json");
+        response.header("Cache-Control", "private, max-age=3600");
+        return "";
     }
 }

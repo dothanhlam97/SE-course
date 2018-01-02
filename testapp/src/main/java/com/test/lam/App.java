@@ -22,9 +22,11 @@ public class App
         String documentRoot = ".";
         String currDirectory = Paths.get(documentRoot).toAbsolutePath().normalize().toString(); 
         externalStaticFileLocation(currDirectory + "/public");
+        
+        MongoDb.connectDb();
 
         get(Path.Web.INDEX, IndexController.getIndex);
         get(Path.Web.SIGNUP, IndexController.getSignUp);
-        MongoDb.connectDb();
+        post(Path.Web.POST_ACCOUNT, IndexController.postAccount);
     }
 }
