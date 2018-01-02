@@ -37,6 +37,50 @@ public class IndexController {
         }
     };
 
+    public static Route getLogin = (Request request, Response response) -> {
+        try {
+            Map <String, Object> arrData = new HashMap<String, Object>();
+            arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
+            return ViewUtil.sendUtf8HtmlContent(request, response, 
+                ViewUtil.render(request, arrData, Path.Template.LOGIN));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    };
+
+    public static Route getPostProject = (Request request, Response response) -> {
+        try {
+            Map <String, Object> arrData = new HashMap<String, Object>();
+            arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
+            return ViewUtil.sendUtf8HtmlContent(request, response, 
+                ViewUtil.render(request, arrData, Path.Template.POST_PROJECT_PAGE));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    };
+
+    public static Route getProfile = (Request request, Response response) -> {
+        try {
+            Map <String, Object> arrData = new HashMap<String, Object>();
+            arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
+            arrData.put("acc_name", Configs.getInstance().prefs.node("global").get("account_name", "fail to load"));
+            arrData.put("acc_email", Configs.getInstance().prefs.node("global").get("account_email", "fail to load"));
+            arrData.put("acc_passd", Configs.getInstance().prefs.node("global").get("account_passd", "fail to load"));
+            arrData.put("acc_hire", Configs.getInstance().prefs.node("global").get("account_hire", "fail to load"));
+            arrData.put("acc_work", Configs.getInstance().prefs.node("global").get("account_work", "fail to load"));
+            return ViewUtil.sendUtf8HtmlContent(request, response, 
+                ViewUtil.render(request, arrData, Path.Template.PROFILE));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    };
+
     public static Route postAccount = (Request request, Response response) -> {
         System.out.print("da render");
         // try {

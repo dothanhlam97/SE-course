@@ -1,0 +1,38 @@
+#parse("/velocity/layout/profile.vm")
+#@mainLayout()
+<body>
+    <div class="row" style="width: 70%; height: 80vh; margin: 5% auto;">
+        <div class="col-md-4">
+            <div style="box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);;
+            border: 1px solid grey;">
+                <div> 
+                    <img style="text-align: center; width: 180px; height: 180px;" src="$host_url/images/logo.svg/">
+                </div>
+                <div class="profile-title">
+                    #if( $acc_hire == "true")
+                        HIRE / MEMBER
+                    #end
+                    #if( $acc_work == "true")
+                        WORK / MEMBER
+                    #end
+                    </br>
+                    $acc_name
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div style="box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);;
+            border: 1px solid grey;">
+                <div style="padding: 5%;">
+                    <div>
+                        <div class="profile-title" style="font-size: 18px; text-align: left;">
+                            ACCOUNT PROFILE
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+#end

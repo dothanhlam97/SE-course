@@ -1,0 +1,46 @@
+#parse("/velocity/layout/index.vm")
+#@mainLayout()
+<body>
+    <div style="with: 100%;">
+        <div style="width: 60%; margin: auto; padding-top: 5%;"> 
+            <div class="post-group">
+                <div class="post-title">
+                    Tell us what you need done
+                </div>
+                <div class="post-content">
+                Get free quotes from skilled freelancers within minutes, view profiles, ratings and portfolios and chat with them. Pay the freelancer only when you are 100% satisfied with their work.
+                </div>
+            </div>
+            <div class="post-group">
+                <div class="post-title">
+                    Choose a name for your project
+                </div>
+                <div class="post-content form-group form-md-line-input">
+                    <input style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="Name of your project">
+                </div>
+            </div>
+            <div class="post-group">
+                <div class="post-title">
+                    Tell us more about your project
+                </div>
+                <div class="post-content form-group form-md-line-input">
+                    <input style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="Describe your project...">
+                </div>
+            </div>
+            <div class="post-group">
+                <div class="post-title">
+                    What skills are required?
+                </div>
+                <div class="post-content form-group form-md-line-input">
+                    <input style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="E.g. Javascript, Vue,...">
+                </div>
+            </div>
+            <a href="">
+                <button class="btn btn-blue">
+                    Post your project
+                </button>
+            </a>
+        </div>
+    </div>
+</body>
+#end

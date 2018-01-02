@@ -59,7 +59,7 @@
 .header-block>.group {
     margin-top: 10px;
     font-family: Lato!important;
-    font-size: 10px!important;
+    font-size: 10px;
 }
 
 .btn.btn-blue {
@@ -68,6 +68,12 @@
     border-color: #2e6da4;
     font-size: 10px;
     font-family: Lato;
+    margin: 0 5px;
+    text-transform: uppercase;
+}
+
+.btn-blue:hover {
+    cursor: all-scroll;
 }
 
 .header-button {
@@ -375,6 +381,8 @@ input:focus {
 .header-button:hover,
 .footer-button:hover {
     font-weight: bold;
+    cursor: all-scroll;
+    color: #337ab7!important;
 }
 
 .footer-button {
@@ -782,4 +790,30 @@ body {
 .loginBtn--google:hover,
 .loginBtn--google:focus {
     background: #E74B37;
+}
+
+.post-title {
+    font-size: 20px;
+    font-family: Lato;
+    font-weight: bolder;
+    color: black;
+}
+
+.post-content {
+    font-size: 13px;
+    font-family: Lato;
+    font-weight: 100;
+    color: rgb(53, 53, 53);
+}
+
+.post-group {
+    padding: 2% 0;
+}
+
+.profile-title {
+    font-family: Lato;
+    font-size: 13px;
+    text-align: center;
+    color: rgb(4, 175, 206);
+    padding: 2% 0;
 }

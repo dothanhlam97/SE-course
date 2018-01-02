@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <p style="text-align:center; color:gray; margin: 0 0 5%; font-family: Lato; font-size: 8px;"> 
-                        By creating an acount, I agree to the <a target="_blank" href="http://bioturing.com/#terms">Terms and Conditions </a>
+                        By creating an acount, I agree to the <a target="_blank" href="">Terms and Conditions </a>
                     </p>                        
                     <button class="btn btn-blue" id="btnSignup" type="submit" style="text-transform: uppercase;">
                         Create an account

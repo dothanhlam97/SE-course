@@ -1,0 +1,39 @@
+#parse("/velocity/layout/login.vm")
+#@mainLayout()
+<div class="container-fluid padd-no login-background" style="height: calc(100vh - 50px);">
+    <div class="relative-width height-full">
+        <div class="middle-div" style="height: 80%;">
+            <div style="background-color: #fff; width: 30%; margin: auto; border: 1px solid lightgrey; 
+            border-radius: 7px!important; padding: 2% 0;">
+                <h1 style="font-family: Pacifico; font-size: calc(3vw +  8px); text-align: center; 
+                margin-bottom: 10%;">Log in!</h1>
+
+                <div style="text-align: center; padding-bottom: 5%;">
+                    <button class="loginBtn loginBtn--google">
+                    Login with Google
+                    </button>
+                </div>
+                <div class="login-form">
+                    <div id="signup" class="form-group" style="text-align:center;">
+                        <div class="form-group form-md-line-input has-info">
+                            <input type="text" class="" autofocus name="email" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group form-md-line-input has-info">
+                            <input type="password" class="" autocomplete="off" name="password" id="passwd" placeholder="Your Password">
+                        </div>
+                    </div>
+                    <div class="form-actions margin-top-30" style="text-align: left; padding-bottom: 5%; color: grey;">
+                        <input type="checkbox" name="remember" id="remember" value="1" style="min-height: 0"/>  Remember me
+                    </div>
+                    <p style="text-align:center; color:gray; margin: 0 0 5%; font-family: Lato; font-size: 8px;"> 
+                        Forgot your password, click <a target="_blank" href="">here </a> to recovery.
+                    </p>                        
+                    <button class="btn btn-blue" id="btnSignup" type="submit" style="text-transform: uppercase;">
+                        Log in
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#end
