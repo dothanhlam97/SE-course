@@ -1,7 +1,10 @@
 package com.test.lam;
 
 // connect to database 
+import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+
+import org.bson.Document;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
  
@@ -34,19 +37,17 @@ public class MongoDb {
 
         // Creating a Mongo client 
         // MongoClient mongo = new MongoClient("localhost", 8080);
-        oClient = new MongoClient("localhost", 8080);
+        oClient = new MongoClient("localhost", 27017);
 
         // Creating Credentials 
-        MongoCredential credential = MongoCredential.createCredential("sampleUser", "myDb", "password".toCharArray());
+        MongoCredential credential;
+        credential = MongoCredential.createCredential("sampleUser", "MyTest", "123456".toCharArray());
         System.out.println("Connected to the database successfully");
 
         // Accessing the database 
-        MongoDatabase database = oClient.getDatabase("test");
-        System.out.println("Credentials ::" + credential);
+        MongoDatabase database = oClient.getDatabase("MyTest");
 
-        // create database 
-        MongoDb.getInstance().createIndex(); 
-        System.out.println("Database:");
-        System.out.print(database);
+        // Creating a collection 
+        System.out.println("Collection created successfully");
     }
 }

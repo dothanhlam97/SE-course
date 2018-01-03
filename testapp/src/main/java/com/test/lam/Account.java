@@ -2,6 +2,7 @@ package com.test.lam;
 
 import java.util.HashMap;
 import java.util.Map;
+import com.google.gson.Gson;
 
 public class Account { 
     public String Name;
@@ -85,5 +86,10 @@ public class Account {
         Email = Email_;
     }
 
+    public String toString() {
+        Gson gson = new Gson();
+        String jsonData = gson.toJson(this);
+        return jsonData;
+    }
 }
 

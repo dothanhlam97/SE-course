@@ -4,13 +4,15 @@ $(document).ready(function() {
         $.ajax({
             type: "POST",
             url: "/post-account",
-            data: {},
+            data: {
+                "email": $('#signup-email').val(),
+                "passd": $('#signup-pass').val()
+            },
             dataType: "json",
             success: function () {
-                console.log('gioi qua');
+                window.location.href = 'http://localhost:8080/login';
             },
             error: function () {
-                console.log('dfcdf');
             }
         });
     });
