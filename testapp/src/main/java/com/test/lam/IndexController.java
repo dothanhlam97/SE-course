@@ -86,10 +86,11 @@ public class IndexController {
             Map <String, Object> arrResponse = new HashMap<>();
             String email = request.queryParams("email");
             String passd = request.queryParams("passd");
+            String isHire = request.queryParams("isHire");
+            String isWork = request.queryParams("isWork");
             String redirectURL = Configs.getInstance().prefs.node("global").get("host_url", "fail to load");
-            Account oAccount = new Account(email, passd);
+            Account oAccount = new Account(email, passd, isHire, isWork);
             MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
-            
             Document document = Document.parse(oAccount.toString());
             MongoCollection<Document> collection = database.getCollection("accounts");
             collection.insertOne(document);

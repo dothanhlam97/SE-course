@@ -29,6 +29,8 @@
                                 <input type="radio" name="looking_for" id="looking_for_work" value="Worker"
                                 style="margin-right: 5px;">Work
                             </label>
+                            <div id="alert-hire-work"
+                            style="font-family: Lato; font-size: 8px; font-style: italic; color: red; display: none;">* You must to choose one.</div>
                         </div>
                     </div>
                     <p style="text-align:center; color:gray; margin: 0 0 5%; font-family: Lato; font-size: 8px;"> 

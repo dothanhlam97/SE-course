@@ -10,6 +10,8 @@ public class Account {
     public String ID;
     public String Email;
     public String Password;
+    public String isHire;
+    public String isWork;
     public Map<String, String> Options;
     public Integer CreatedDate;
     public String Avatar;
@@ -20,18 +22,20 @@ public class Account {
         Options = new HashMap<>();
     }
 
-    public Account(String Name_, String Password_, String ID_, String Email_) {
-        setName(Name_);
-        setPassword(Password_);
-        setID(ID_);
-        setEmail(Email_);
-        setCreatedDate(CommonUtil.getCurrentUnixTimestampAsInt());
-        Options = new HashMap<>();
-    }
+    // public Account(String Name_, String Password_, String ID_, String Email_) {
+    //     setName(Name_);
+    //     setPassword(Password_);
+    //     setID(ID_);
+    //     setEmail(Email_);
+    //     setCreatedDate(CommonUtil.getCurrentUnixTimestampAsInt());
+    //     Options = new HashMap<>();
+    // }
 
-    public Account(String Email_, String Password_) {
+    public Account(String Email_, String Password_, String isHire_, String isWork_) {
         setPassword(Password_);
         setEmail(Email_);
+        setHire(isHire_);
+        setWork(isWork_);
     }
 
     public Account(Account oldAccount) {
@@ -62,6 +66,22 @@ public class Account {
 
     public void setName(String Name_) {
         Name = Name_;
+    }
+
+    public void setHire(String isHire_) {
+        isHire = isHire_;
+    }
+
+    public void setWork(String isWork_) {
+        isWork = isWork_;
+    }
+
+    public String getHire() {
+        return isHire;
+    }
+
+    public String getWork() {
+        return isWork;
     }
 
     public void setCreatedDate(int CreatedDate_) {
