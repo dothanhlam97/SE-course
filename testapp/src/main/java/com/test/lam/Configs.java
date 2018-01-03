@@ -6,8 +6,8 @@ import org.ini4j.IniPreferences;
 import java.io.File;
 
 public class Configs {
-    public static final String LAM = "heo";
-    public static final String serverName = "ahiho";
+    public static final String SUCCESS = "OK";
+    public static final String FAIL = "FAIL";
 
     private Configs() {
     }

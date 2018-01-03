@@ -10,6 +10,8 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
+import static com.mongodb.client.model.Filters.*;
+import static com.mongodb.client.model.Updates.*;
 
 public class IndexController {
     public static Route getIndex = (Request request, Response response) -> { 
@@ -93,6 +95,11 @@ public class IndexController {
             MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
             Document document = Document.parse(oAccount.toString());
             MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", email)).first();
+            if (arrDocument != null) {
+                return Configs.FAIL;
+            }
+            System.out.print(arrDocument);
             collection.insertOne(document);
             arrResponse.put("redirectURL", redirectURL);
             return ViewUtil.sendJsonContent(request, response, arrResponse);

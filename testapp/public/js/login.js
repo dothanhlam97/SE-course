@@ -7,6 +7,7 @@ $(document).ready(function() {
         $('#signup-email').css('border-bottom-color', "#327ad5");
         $('#signup-pass').css('border-bottom-color', "#327ad5");
         $('#alert-hire-work').css('display', 'none');
+        $('#alert-email').css('display', 'none');
         if (!$('#signup-email').val()) {
             $('#signup-email').css('border-bottom-color', 'red');
             flag = true;
@@ -36,6 +37,7 @@ $(document).ready(function() {
                 window.location.href = 'http://localhost:8080/login';
             },
             error: function () {
+                $('#alert-email').css("display", "block");
             }
         });
     });

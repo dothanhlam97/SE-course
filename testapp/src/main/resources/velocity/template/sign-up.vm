@@ -39,6 +39,8 @@
                     <button class="btn btn-blue" id="btnSignup" type="submit" style="text-transform: uppercase;">
                         Create an account
                     </button>
+                    <div id="alert-email"
+                    style="font-family: Lato; font-size: 8px; font-style: italic; color: red; display: none;">* Your email is registered before.</div>
                 </div>
             </div>
         </div>
