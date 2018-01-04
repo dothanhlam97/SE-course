@@ -29,6 +29,7 @@ public class App
         get(Path.Web.SIGNUP, IndexController.getSignUp);
         get(Path.Web.LOGIN, IndexController.getLogin);
         post(Path.Web.POST_ACCOUNT, IndexController.postAccount);
+        get(Path.Web.LOGIN_ACCOUNT, IndexController.loginAccount);
         get(Path.Web.POST_PROJECT_PAGE, IndexController.getPostProject);
         get(Path.Web.PROFILE, IndexController.getProfile);
     }

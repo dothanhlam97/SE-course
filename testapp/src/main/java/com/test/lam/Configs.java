@@ -8,6 +8,8 @@ import java.io.File;
 public class Configs {
     public static final String SUCCESS = "OK";
     public static final String FAIL = "FAIL";
+    public static final String WRONG_EMAIL = "FAIL_EMAIL";
+    public static final String WRONG_PASS = "FAIL_PASS";
 
     private Configs() {
     }

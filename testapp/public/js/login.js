@@ -41,4 +41,23 @@ $(document).ready(function() {
             }
         });
     });
+    $('#btnLogin').on("click", function (event) {
+        event.preventDefault();
+        $.ajax({
+            type: "GET",
+            url: "/login-account",
+            data: {
+                "email": $('#login-email').val(),
+                "passd": $('#login-pass').val(),
+            },
+            dataType: "json",
+            success: function () {
+                window.location.href = 'http://localhost:8080';
+            },
+            error: function (err) {
+                console.log('fail');
+                $('#alert-email').css("display", "block");
+            }
+        });
+    });
 });

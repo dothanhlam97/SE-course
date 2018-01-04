@@ -108,4 +108,27 @@ public class IndexController {
             return null;
         }
     };
+
+    public static Route loginAccount = (Request request, Response response) -> {
+        try {
+            Map <String, Object> arrResponse = new HashMap<>();
+            String email = request.queryParams("email");
+            String passd = request.queryParams("passd");
+            MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+            MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", email)).first();
+            if (arrDocument == null) {
+                return Configs.WRONG_EMAIL;
+            }
+            // System.out.print(arrDocument.getString("Password"));
+            // System.out.print(passd == arrDocument.getString("Password").toString());
+            // if (arrDocument.getString("Password") != passd) {
+            //     return Configs.WRONG_PASS;
+            // }
+            return Configs.SUCCESS;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        }
+    };
 }

@@ -5,6 +5,7 @@ public class Path {
         public static final String INDEX = "/";
         public static final String SIGNUP = "/sign-up";
         public static final String POST_ACCOUNT = "/post-account";
+        public static final String LOGIN_ACCOUNT = "/login-account";
         public static final String LOGIN = "/login";
         public static final String POST_PROJECT_PAGE = "/post-project";
         public static final String PROFILE = "/profile";
