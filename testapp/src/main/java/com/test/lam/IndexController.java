@@ -120,12 +120,10 @@ public class IndexController {
             if (arrDocument == null) {
                 return Configs.WRONG_EMAIL;
             }
-            // System.out.print(arrDocument.getString("Password"));
-            // System.out.print(passd == arrDocument.getString("Password").toString());
-            // if (arrDocument.getString("Password") != passd) {
-            //     return Configs.WRONG_PASS;
-            // }
-            return Configs.SUCCESS;
+            if (!arrDocument.getString("Password").equals(passd)) {
+                return Configs.WRONG_PASS;
+            }
+            return ViewUtil.sendJsonContent(request, response, arrResponse);
         } catch (Exception ex) {
             ex.printStackTrace();
             return null;

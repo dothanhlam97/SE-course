@@ -23,7 +23,7 @@
                         <div class="form-group form-md-line-input has-info">
                             <input id="login-pass" type="password" class="" autocomplete="off" name="password" id="passwd" placeholder="Your Password">
                         </div>
-                        <div id="alert-email"
+                        <div id="alert-pass"
                         style="font-family: Lato; font-size: 8px; font-style: italic; color: red; display: none; margin-top: 5px">
                         * Your password is not correct.</div>
                     </div>

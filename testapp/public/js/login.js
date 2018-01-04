@@ -43,6 +43,8 @@ $(document).ready(function() {
     });
     $('#btnLogin').on("click", function (event) {
         event.preventDefault();
+        $('#alert-email').css('display', 'none');
+        $('#alert-pass').css('display', 'none');
         $.ajax({
             type: "GET",
             url: "/login-account",
@@ -55,8 +57,12 @@ $(document).ready(function() {
                 window.location.href = 'http://localhost:8080';
             },
             error: function (err) {
-                console.log('fail');
-                $('#alert-email').css("display", "block");
+                if (err.responseText === 'FAIL_EMAIL') {
+                    $('#alert-email').css('display', 'block');
+                }
+                if (err.responseText === 'FAIL_PASS') {
+                    $('#alert-pass').css('display', 'block');
+                }
             }
         });
     });
