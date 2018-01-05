@@ -120,9 +120,14 @@ public class IndexController {
             if (arrDocument == null) {
                 return Configs.WRONG_EMAIL;
             }
+            System.out.print(arrDocument);
             if (!arrDocument.getString("Password").equals(passd)) {
                 return Configs.WRONG_PASS;
             }
+            // set current Account 
+
+            AccountController accountController = AccountController.getInstance();
+            accountController.setCurrentAccount(email);
             return ViewUtil.sendJsonContent(request, response, arrResponse);
         } catch (Exception ex) {
             ex.printStackTrace();

@@ -2,7 +2,7 @@ package com.test.lam;
 
 class AccountController {
     private Configs oConfigs = Configs.getInstance();
-    private static Account currentAccount = null;
+    private static String currentAccountEmail = null;
 
     private static class AccountControllerHolder {
         private static final AccountController INSTANCE = new AccountController();
@@ -12,11 +12,11 @@ class AccountController {
         return AccountControllerHolder.INSTANCE;
     }
 
-    public void setCurrentAccount(Account current) {
-        currentAccount = current;
+    public void setCurrentAccount(String email) {
+        currentAccountEmail = email;
     }
 
-    public Account getCurrenAccount() {
-        return currentAccount;
+    public String getCurrenAccount() {
+        return currentAccountEmail;
     }
 }
