@@ -18,6 +18,8 @@ public class IndexController {
         try {
             Map<String, Object> arrData = new HashMap<String, Object>();
             arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "failed to get"));
+            String currentAccount = Account.getCurrentAccount();
+            arrData.put("current_account",  currentAccount);
             return ViewUtil.sendUtf8HtmlContent(request, response,
                     ViewUtil.render(request, arrData, Path.Template.INDEX));
         } catch (Exception e) {
@@ -111,7 +113,7 @@ public class IndexController {
 
     public static Route loginAccount = (Request request, Response response) -> {
         try {
-            Map <String, Object> arrResponse = new HashMap<>();
+            Map<String, Object> arrResponse = new HashMap<>();
             String email = request.queryParams("email");
             String passd = request.queryParams("passd");
             MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
@@ -120,14 +122,13 @@ public class IndexController {
             if (arrDocument == null) {
                 return Configs.WRONG_EMAIL;
             }
-            System.out.print(arrDocument);
+            System.out.print(!arrDocument.getString("Password").equals(passd));
             if (!arrDocument.getString("Password").equals(passd)) {
                 return Configs.WRONG_PASS;
             }
             // set current Account 
-
-            AccountController accountController = AccountController.getInstance();
-            accountController.setCurrentAccount(email);
+            Account oAccount = new Account(arrDocument.getString("Email"), "", "", "");
+            Account.setCurrentAccount(oAccount);
             return ViewUtil.sendJsonContent(request, response, arrResponse);
         } catch (Exception ex) {
             ex.printStackTrace();

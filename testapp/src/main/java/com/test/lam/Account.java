@@ -3,6 +3,13 @@ package com.test.lam;
 import java.util.HashMap;
 import java.util.Map;
 import com.google.gson.Gson;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoCredential;
+import static com.mongodb.client.model.Filters.*;
+import static com.mongodb.client.model.Updates.*;
+import org.bson.Document;
 
 public class Account { 
     public String Name;
@@ -110,6 +117,24 @@ public class Account {
         Gson gson = new Gson();
         String jsonData = gson.toJson(this);
         return jsonData;
+    }
+
+    public static java.lang.String getCurrentAccount() {
+        MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+        MongoCollection<Document> collection = database.getCollection("curentAccount");
+        Document arrDocument = collection.find().first();
+        if (arrDocument == null) {
+            return "";
+        } else {
+            return arrDocument.getString("Email");
+        }
+    }
+
+    public static void setCurrentAccount(Account oAccount) {
+        MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+        MongoCollection<Document> collection = database.getCollection("curentAccount");
+        Document document = Document.parse(oAccount.toString());
+        collection.insertOne(document);
     }
 }
 

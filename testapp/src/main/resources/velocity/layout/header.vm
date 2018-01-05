@@ -8,6 +8,7 @@
     <span class="header-button" style="font-weight: bold; color: grey;"> Hire Freelancer </span>
     <span class="header-button" style="font-weight: bold; color: grey;"> Find Work </span>
   </div>
+  #if ($current_account == "")
   <div class="col-md-5 pull-right group">
     <a class="header-button" href="$host_url/login"
     style="text-decoration: none;"> Login </a>
@@ -19,4 +20,9 @@
       </button>
     </a>
   </div>
+  #else 
+  <div class="col-md-5 pull-right group" style="margin-top: 15px;">
+    <span href="$host_url/profile" class="header-button" style="font-weight: bold; color: grey;"> $current_account </span>
+  </div>
+  #end
 </div>
