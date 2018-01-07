@@ -20,10 +20,10 @@
                     #else
                     #if ($is_hire == "true")
                         <a href="$host_url/post-project"> 
-                        <button class="btn btn-blue" style="fon-size: 15px; text-transform: uppercase;">I want to hire</button>
+                        <button class="btn btn-blue" style="fon-size: 15px; text-transform: uppercase;"><a>I want to hire</a></button>
                     </a>
                     #else
-                        <button class="btn btn-blue-outline" style="font-size: 15px; text-transform: uppercase;">I want to work</button>
+                        <button class="btn btn-blue-outline" style="font-size: 15px; text-transform: uppercase;"><a>I want to work</a></button>
                     #end 
                     #end
                 </div>

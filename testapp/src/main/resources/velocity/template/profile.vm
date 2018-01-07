@@ -1,28 +1,10 @@
 #parse("/velocity/layout/profile.vm")
 #@mainLayout()
 <body>
-    <div class="row" style="width: 70%; height: 80vh; margin: 5% auto;">
+    <div class="row" style="width: 70%; margin: 5% auto;">
         
-        <div class="col-md-4">
-            <div style="box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);;
-            border: 1px solid grey;">
-                <div> 
-                    <img style="text-align: center; width: 180px; height: 180px;" src="$host_url/images/logo.svg/">
-                </div>
-                <div class="profile-title">
-                    #if( $acc_hire == "true")
-                        HIRE / MEMBER
-                    #end
-                    #if( $acc_work == "true")
-                        WORK / MEMBER
-                    #end
-                    </br>
-                    $acc_name
-                </div>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div style="box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);;
+        <div class="row" style="width: 100%;">
+            <div style="width: 100%; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);;
             border: 1px solid grey;">
                 <div style="padding: 5%;">
                     <div>
@@ -31,28 +13,39 @@
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane active" id="tab_1_1">
-                                <form role="form" action="#">
+                                <form class="profile" role="form" action="#">
                                     <div class="form-group">
                                         <label class="control-label">Name</label>
                                         <input id="userNameSource" type="text" placeholder="Your name" class="form-control" value="Hoa Pham">
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Place of birth</label>
+                                        <label class="control-label">Role</label>
                                         <input id="birthplaceSource" type="text" placeholder="Your place of birth" value="" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Birthday</label>
-                                        <input id="birthday" type="text" data-format="DD / MM / YYYY" data-template="DD / MMM / YYYY" name="datetime" value="" class="form-control">
-                                        
+                                        <label class="control-label">Skill</label>
+                                        <input id="birthplaceSource" type="text" placeholder="Your place of birth" value="" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Email</label>
-                                        <input id="userEmail" type="email" disabled="" value="thaihoabo@gmail.com" class="form-control"> </div> <div class="form-group"> <label class="control-label">About me</label> <textarea id="aboutMeSource" class="form-control" rows="3" placeholder="Write something about yourself">                                                                                                                                                                                                                                                                                                                                Test test now 
-                                                            
-                                                            
-                                                            
-                                                            
-                                                            </textarea> </div> <div class="form-group"> <label class="control-label">Twitter</label> <input type="text" id="twitterSource" placeholder="Your Twitter page" value="linuxpham" class="form-control"> </div> <div class="form-group"> <label class="control-label">Facebook</label> <input type="text" id="facebookSource" placeholder="Your Facebook page" value="abc" class="form-control"> </div> <div class="form-group"> <label class="control-label">Google plus</label> <input type="text" id="googleplusSource" placeholder="Your Google Plus page" value="linuxpham" class="form-control"> </div> <div class="form-group"> <div id="messageGeneral" class="text-danger"></div> </div> <div class="margiv-top-10"> <button type="button" id="changeGeneral" class="btn green"> Save changes </button> <a href="http://demo.bioturing.com/profile" class="btn default"> Cancel </a> </div> </form> </div> <div class="tab-pane" id="tab_1_2"> <form action="#"> <div class="form-group"> <label class="control-label">Current password</label> <input type="password" id="currentPass" placeholder="Current password" class="form-control"> </div> <div class="form-group"> <label class="control-label">New Password</label> <input type="password" class="form-control" id="newPass" placeholder="New password"> </div> <div class="form-group"> <label class="control-label">Re-type New Password</label> <input type="password" class="form-control" id="confirmPass" placeholder="Confirm password"> </div> <div class="form-group"> <label class="control-label">Show characters</label> <input type="checkbox" id="showCharacter"> </div> <div class="form-group"> <div id="message" class="text-danger"></div> </div> <div class="margin-top-10"> <button type="button" id="submitNewPass" class="btn green"> Change password </button> <a href="http://demo.bioturing.com/profile" class="btn default"> Cancel </a> </div> </form> </div> <div class="tab-pane hide" id="tab_1_3"> <form action="#"> <table class="table table-light table-hover"> <tbody><tr> <td> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus.. </td> <td> <div class="mt-radio-inline"> <label class="mt-radio"> <input type="radio" name="optionsRadios1" value="option1"> Yes <span></span> </label> <label class="mt-radio"> <input type="radio" name="optionsRadios1" value="option2" checked=""> No <span></span> </label> </div> </td> </tr> <tr> <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td> <td> <div class="mt-radio-inline"> <label class="mt-radio"> <input type="radio" name="optionsRadios11" value="option1"> Yes <span></span> </label> <label class="mt-radio"> <input type="radio" name="optionsRadios11" value="option2" checked=""> No <span></span> </label> </div> </td> </tr> <tr> <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td> <td> <div class="mt-radio-inline"> <label class="mt-radio"> <input type="radio" name="optionsRadios21" value="option1"> Yes <span></span> </label> <label class="mt-radio"> <input type="radio" name="optionsRadios21" value="option2" checked=""> No <span></span> </label> </div> </td> </tr> <tr> <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td> <td> <div class="mt-radio-inline"> <label class="mt-radio"> <input type="radio" name="optionsRadios31" value="option1"> Yes <span></span> </label> <label class="mt-radio"> <input type="radio" name="optionsRadios31" value="option2" checked=""> No <span></span> </label> </div> </td> </tr> </tbody></table> <div class="margin-top-10"> <a href="javascript:;" class="btn red"> Save Changes </a> <a href="javascript:;" class="btn default"> Cancel </a> </div> </form> </div> </div>
+                                        <input id="userEmail" type="email" disabled="" value="thaihoabo@gmail.com" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                    <label class="control-label">Twitter</label>
+                                    <input type="text" id="twitterSource" placeholder="Your Twitter page" value="linuxpham" class="form-control">
+                                    </div>
+                                    <div class="form-group"> <label class="control-label">Facebook</label>
+                                    <input type="text" id="facebookSource" placeholder="Your Facebook page" value="abc" class="form-control"> </div>
+                                    <div class="form-group"> <label class="control-label">Google plus</label> <input type="text" id="googleplusSource" 
+                                    placeholder="Your Google Plus page" value="linuxpham" class="form-control"> </div> <div class="form-group"> <div id="messageGeneral" class="text-danger"></div> </div> <div class="margiv-top-10"> <button type="button" id="changeGeneral" class="btn green"> Save changes </button> <a href="http://demo.bioturing.com/profile" class="btn default"> Cancel </a> </div> </form> </div> <div class="tab-pane" id="tab_1_2"> <form action="#"> <div class="form-group"> <label class="control-label">Current password</label> <input type="password" id="currentPass" placeholder="Current password" class="form-control"> </div> <div class="form-group"> <label class="control-label">New Password</label> <input type="password" class="form-control" id="newPass" placeholder="New password"> </div> <div class="form-group"> <label class="control-label">Re-type New Password</label> <input type="password" class="form-control" id="confirmPass" placeholder="Confirm password"> </div> <div class="form-group"> <label class="control-label">Show characters</label> <input type="checkbox" id="showCharacter"> </div> <div class="form-group"> <div id="message" class="text-danger"></div> </div> <div class="margin-top-10"> <button type="button" id="submitNewPass" class="btn green"> Change password </button> <a href="http://demo.bioturing.com/profile" class="btn default"> Cancel </a> </div> </form> </div> <div class="tab-pane hide" id="tab_1_3"> <form action="#"> <table class="table table-light table-hover"> <tbody><tr> <td> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus.. </td> <td> <div class="mt-radio-inline"> <label class="mt-radio"> <input type="radio" name="optionsRadios1" value="option1"> Yes <span></span> </label> <label class="mt-radio"> <input type="radio" name="optionsRadios1" value="option2" checked=""> No <span></span> </label> </div> </td> </tr> <tr> <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td> <td> <div class="mt-radio-inline"> <label class="mt-radio"> <input type="radio" name="optionsRadios11" value="option1"> Yes <span></span> </label> <label class="mt-radio"> <input type="radio" name="optionsRadios11" value="option2" checked=""> No <span></span> </label> </div> </td> </tr> <tr> <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td> <td> <div class="mt-radio-inline"> <label class="mt-radio"> <input type="radio" name="optionsRadios21" value="option1"> Yes <span></span> </label> <label class="mt-radio"> <input type="radio" name="optionsRadios21" value="option2" checked=""> No <span></span> </label> </div> </td> </tr> <tr> <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td> <td> <div class="mt-radio-inline"> <label class="mt-radio"> <input type="radio" name="optionsRadios31" value="option1"> Yes <span></span> </label> <label class="mt-radio"> <input type="radio" name="optionsRadios31" value="option2" checked=""> No <span></span> </label> </div> </td> </tr> </tbody></table> <div class="margin-top-10"> <a href="javascript:;" class="btn red"> 
+                                    Save Changes </a> 
+                                    <a href="javascript:;" class="btn default"> 
+                                    Cancel 
+                                    </a> 
+                                    </div> 
+                                    </form> 
+                                    </div> 
+                                    </div>
                     </div>
                 </div>
             </div>
