@@ -134,6 +134,7 @@ public class Account {
         MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
         MongoCollection<Document> collection = database.getCollection("curentAccount");
         Document document = Document.parse(oAccount.toString());
+        System.out.print("fdvsdf");
         collection.insertOne(document);
     }
 }

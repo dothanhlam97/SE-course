@@ -35,7 +35,7 @@
         <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Post your project </li>
         <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Hire freelancer </li>
         #end
-        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> <a href="$host_url/logout" > Log out </a> </li>
+        <li type="submit" id="btn-log-out" class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Log out</li>
       </ul>
     </div>
   </div>

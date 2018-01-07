@@ -32,5 +32,6 @@ public class App
         get(Path.Web.LOGIN_ACCOUNT, IndexController.loginAccount);
         get(Path.Web.POST_PROJECT_PAGE, IndexController.getPostProject);
         get(Path.Web.PROFILE, IndexController.getProfile);
+        post(Path.Web.LOGOUT, IndexController.postLogOut);
     }
 }

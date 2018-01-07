@@ -11,5 +11,6 @@
     #parse("/velocity/layout/header.vm")
     $bodyContent
   </body>
+  <script src="$host_url/js/global.js" type="text/javascript"></script>
 </html>
 #end

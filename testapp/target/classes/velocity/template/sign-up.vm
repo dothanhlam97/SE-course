@@ -23,10 +23,10 @@
                         </div>
                         <div class="signup-objective button-group">
                             <label class="btn signup-objective-label">
-                                <input type="radio" name="looking_for" id="looking_to_hire" value="Employer"
+                                <input type="radio" name="looking_for_hire" id="looking_for_hire" value="Employer"
                                 style="margin-right: 5px;">Hire
                             </label><label class="btn signup-objective-label">
-                                <input type="radio" name="looking_for" id="looking_for_work" value="Worker"
+                                <input type="radio" name="looking_for_work" id="looking_for_work" value="Worker"
                                 style="margin-right: 5px;">Work
                             </label>
                             <div id="alert-hire-work"

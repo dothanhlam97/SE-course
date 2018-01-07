@@ -9,6 +9,7 @@ public class Path {
         public static final String LOGIN = "/login";
         public static final String POST_PROJECT_PAGE = "/post-project";
         public static final String PROFILE = "/profile";
+        public static final String LOGOUT = "/log-out";
     }
 
     public static class Template {

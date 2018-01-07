@@ -22,9 +22,16 @@ public class IndexController {
             MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
             MongoCollection<Document> collection = database.getCollection("accounts");
             Document arrDocument = collection.find(eq("Email", currentAccount)).first();
-            arrData.put("current_account", arrDocument.getString("Email"));
-            arrData.put("is_hire", arrDocument.getString("isHire"));
-            arrData.put("is_work", arrDocument.getString("isWork"));
+            if (arrDocument != null) {
+                arrData.put("current_account", arrDocument.getString("Email"));
+                arrData.put("is_hire", arrDocument.getString("isHire"));
+                arrData.put("is_work", arrDocument.getString("isWork"));
+            } else { 
+                arrData.put("current_account", "");
+                arrData.put("is_hire", "true");
+                arrData.put("is_work", "true");
+            }
+            
             return ViewUtil.sendUtf8HtmlContent(request, response,
                     ViewUtil.render(request, arrData, Path.Template.INDEX));
         } catch (Exception e) {
@@ -131,6 +138,7 @@ public class IndexController {
             MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
             MongoCollection<Document> collection = database.getCollection("accounts");
             Document arrDocument = collection.find(eq("Email", email)).first();
+            
             if (arrDocument == null) {
                 return Configs.WRONG_EMAIL;
             }
@@ -141,6 +149,24 @@ public class IndexController {
             // set current Account 
             Account oAccount = new Account(arrDocument.getString("Email"), "", "", "");
             Account.setCurrentAccount(oAccount);
+            return ViewUtil.sendJsonContent(request, response, arrResponse);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        }
+    };
+
+    public static Route postLogOut = (Request request, Response response) -> {
+        try {
+            Map<String, Object> arrResponse = new HashMap<>();
+            String currentAccount = Account.getCurrentAccount();
+            MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+            MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+            String email = arrDocument.getString("Email");
+            collection = database.getCollection("curentAccount");
+            System.out.print(email);
+            collection.deleteOne(eq("Email", email));
             return ViewUtil.sendJsonContent(request, response, arrResponse);
         } catch (Exception ex) {
             ex.printStackTrace();
