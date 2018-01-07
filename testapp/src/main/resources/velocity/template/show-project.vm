@@ -1,0 +1,33 @@
+#parse("/velocity/layout/post-project.vm")
+#@mainLayout()
+<body>
+    <div style="with: 100%;">
+        <div style="width: 60%; margin: auto;" class="post-project">
+            <h3 style="margin: 5%; font-family: Pacifico; font-size: 60px; text-align: center;">
+                All your projects
+            </h3>
+            <table style="width: 100%; margin-top: 5%;"> 
+                <tr>
+                    <th style="border: 1px solid">Name of project</th>
+                    <th style="border: 1px solid">Description</th> 
+                    <th style="border: 1px solid">Requirement</th>
+                    <th style="border: 1px solid">Action</th>
+                </tr>
+                #foreach( $item in $project )
+                <tr>
+                    <th style="border: 1px solid">$item["name"]</th>
+                    <th style="border: 1px solid">$item["about"]</th>
+                    <th style="border: 1px solid">$item["requirement"]</th>
+                    <th style="border: 1px solid">
+                        <button class="btn btn-post-project btn-lg" style="font-size: 13px; font-family: Lato;"> Edit
+                        </button>
+                        <button class="btn btn-post-project btn-lg"> Remove
+                        </button>
+                    </th>
+                <tr>
+                #end
+            </table> 
+        </div>
+    </div>
+</body>
+#end

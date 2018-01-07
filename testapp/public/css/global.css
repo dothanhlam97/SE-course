@@ -817,3 +817,66 @@ body {
     color: rgb(4, 175, 206);
     padding: 2% 0;
 }
+
+
+.post-project table {
+    border-collapse: separate;
+    background: #fff;
+    @include border-radius(5px);
+    margin: 50px auto;
+    @include box-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+}
+
+.post-project thead {
+    @include border-radius(5px);
+}
+
+.post-project thead th {
+    font-family: 'Patua One', cursive;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    padding: 20px;
+    background-image: (linear-gradient(#646f7f, #4a5564));
+    border-top: 1px solid #858d99;
+}
+
+.post-project tbody tr td {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #5f6062;
+    font-size: 13px;
+    padding: 20px 20px 20px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.post-project tbody tr:nth-child(2n) {
+    background: #f0f3f5;
+}
+
+.post-project tbody tr:last-child td:last-child {
+    border-bottom: none;
+    border-bottom-right-radius:5px;
+}
+
+.post-project tbody tr:last-child td:first-child {
+    border-bottom: none;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+.post-project tbody:hover>tr:hover td {
+    text-shadow: none;
+    color: #2d2d2d;
+    opacity: 1.0;
+}
+
+.btn-post-project {
+    background-color: rgb(19, 170, 190);
+    font-family: Lato;
+    padding: 2px;
+    
+}

@@ -6,12 +6,18 @@ import spark.Route;
 import java.util.Map;
 import java.util.HashMap;
 import org.bson.Document;
+
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
 import static com.mongodb.client.model.Filters.*;
 import static com.mongodb.client.model.Updates.*;
+
+import org.json.simple.JSONObject;
+import java.util.List;
+import java.util.ArrayList;;
 
 public class IndexController {
     public static Route getIndex = (Request request, Response response) -> { 
@@ -165,7 +171,6 @@ public class IndexController {
             Document arrDocument = collection.find(eq("Email", currentAccount)).first();
             String email = arrDocument.getString("Email");
             collection = database.getCollection("curentAccount");
-            System.out.print(email);
             collection.deleteOne(eq("Email", email));
             return ViewUtil.sendJsonContent(request, response, arrResponse);
         } catch (Exception ex) {
@@ -173,4 +178,53 @@ public class IndexController {
             return null;
         }
     };
+
+    public static Route postProject = (Request request, Response response) -> {
+        try {
+            Map<String, Object> arrResponse = new HashMap<>();
+            String currentAccount = Account.getCurrentAccount();
+            MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+            MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+            String email = arrDocument.getString("Email");
+            collection = database.getCollection("project");
+            Document document = Document.parse(
+                "{\"name\": \"" + request.queryParams("name") + 
+                "\",\"about\": \"" + request.queryParams("about") + 
+                "\",\"requirement\": \"" + request.queryParams("requirement") + 
+                "\",\"Email\": \"" + email + "\"}");
+            collection.insertOne(document);
+            return ViewUtil.sendJsonContent(request, response, arrResponse);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        }
+    }; 
+
+    public static Route showListProject = (Request request, Response response) -> {
+        try {
+            Map<String, Object> arrData = new HashMap<String, Object>();
+            arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
+            String currentAccount = Account.getCurrentAccount();
+            arrData.put("current_account", currentAccount);
+            MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+            MongoCollection<Document> collection = database.getCollection("project");
+            FindIterable<Document> arrDocument = collection.find(eq("Email", currentAccount));
+            List <JSONObject> project = new ArrayList<JSONObject>();
+            for (Document document : arrDocument) {
+                if (document != null) {
+                    project.add(new JSONObject(document));
+                }
+            }
+            arrData.put("project", project);
+            return ViewUtil.sendUtf8HtmlContent(request, response,
+                    ViewUtil.render(request, arrData, Path.Template.SHOW_PROJECT));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }; 
+
+
 }

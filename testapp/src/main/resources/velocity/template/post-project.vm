@@ -1,4 +1,4 @@
-#parse("/velocity/layout/index.vm")
+#parse("/velocity/layout/post-project.vm")
 #@mainLayout()
 <body>
     <div style="with: 100%;">
@@ -16,7 +16,7 @@
                     Choose a name for your project
                 </div>
                 <div class="post-content form-group form-md-line-input">
-                    <input style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="Name of your project">
+                    <input id="name-of-project" style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="Name of your project">
                 </div>
             </div>
             <div class="post-group">
@@ -24,7 +24,7 @@
                     Tell us more about your project
                 </div>
                 <div class="post-content form-group form-md-line-input">
-                    <input style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="Describe your project...">
+                    <input id="about-project" style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="Describe your project...">
                 </div>
             </div>
             <div class="post-group">
@@ -32,11 +32,11 @@
                     What skills are required?
                 </div>
                 <div class="post-content form-group form-md-line-input">
-                    <input style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="E.g. Javascript, Vue,...">
+                    <input id="require-project" style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="E.g. Javascript, Vue,...">
                 </div>
             </div>
             <a href="">
-                <button class="btn btn-blue">
+                <button id="btn-post-project" class="btn btn-blue">
                     Post your project
                 </button>
             </a>
