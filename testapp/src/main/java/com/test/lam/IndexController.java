@@ -19,7 +19,12 @@ public class IndexController {
             Map<String, Object> arrData = new HashMap<String, Object>();
             arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "failed to get"));
             String currentAccount = Account.getCurrentAccount();
-            arrData.put("current_account",  currentAccount);
+            MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+            MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+            arrData.put("current_account", arrDocument.getString("Email"));
+            arrData.put("is_hire", arrDocument.getString("isHire"));
+            arrData.put("is_work", arrDocument.getString("isWork"));
             return ViewUtil.sendUtf8HtmlContent(request, response,
                     ViewUtil.render(request, arrData, Path.Template.INDEX));
         } catch (Exception e) {
@@ -32,6 +37,8 @@ public class IndexController {
         try {
             Map <String, Object> arrData = new HashMap<String, Object>();
             arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
+            String currentAccount = Account.getCurrentAccount();
+            arrData.put("current_account", "");
             return ViewUtil.sendUtf8HtmlContent(request, response, 
                 ViewUtil.render(request, arrData, Path.Template.SIGNUP));
 
@@ -45,6 +52,7 @@ public class IndexController {
         try {
             Map <String, Object> arrData = new HashMap<String, Object>();
             arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
+            arrData.put("current_account", "");
             return ViewUtil.sendUtf8HtmlContent(request, response, 
                 ViewUtil.render(request, arrData, Path.Template.LOGIN));
 
@@ -58,6 +66,8 @@ public class IndexController {
         try {
             Map <String, Object> arrData = new HashMap<String, Object>();
             arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
+            String currentAccount = Account.getCurrentAccount();
+            arrData.put("current_account", currentAccount);
             return ViewUtil.sendUtf8HtmlContent(request, response, 
                 ViewUtil.render(request, arrData, Path.Template.POST_PROJECT_PAGE));
 
@@ -76,6 +86,8 @@ public class IndexController {
             arrData.put("acc_passd", Configs.getInstance().prefs.node("global").get("account_passd", "fail to load"));
             arrData.put("acc_hire", Configs.getInstance().prefs.node("global").get("account_hire", "fail to load"));
             arrData.put("acc_work", Configs.getInstance().prefs.node("global").get("account_work", "fail to load"));
+            String currentAccount = Account.getCurrentAccount();
+            arrData.put("current_account", currentAccount);
             return ViewUtil.sendUtf8HtmlContent(request, response, 
                 ViewUtil.render(request, arrData, Path.Template.PROFILE));
 

@@ -1,12 +1,15 @@
 <div class="header-block row" style="margin: 0 15px;">
   <div class="col-md-2">
-    <a  href="$host_url/" target="_blank" >
+    <a href="$host_url/" target="_blank" >
       <img src="$host_url/images/logo.svg" style="margin-top: 10%; height: 50%;">
     </a>
   </div>
+  
   <div class="col-md-5 pull-left group" style="margin-top: 15px;">
-    <span class="header-button" style="font-weight: bold; color: grey;"> Hire Freelancer </span>
-    <span class="header-button" style="font-weight: bold; color: grey;"> Find Work </span>
+    #if ($current_account == "")
+    <span class="header-button" style="font-weight: bold; color: black;"> Hire Freelancer </span>
+    <span class="header-button" style="font-weight: bold; color: black;"> Find Work </span>
+    #end
   </div>
   #if ($current_account == "")
   <div class="col-md-5 pull-right group">
@@ -22,7 +25,19 @@
   </div>
   #else 
   <div class="col-md-5 pull-right group" style="margin-top: 15px;">
-    <span href="$host_url/profile" class="header-button" style="font-weight: bold; color: grey;"> $current_account </span>
+    <div class="dropdown">
+      <span class="dropdown-toggle header-button" style="font-weight: bold; color: black;" data-toggle="dropdown">  $current_account </span>
+      <ul class="dropdown-menu" style="margin-left: 75%; width: 25%; font-size: 12px; color: black">
+        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;" href="$host_url/profile" > Profile </li>
+        #if ($is_work == "true")
+        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Find work </li>
+        #else 
+        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Post your project </li>
+        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Hire freelancer </li>
+        #end
+        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> <a href="$host_url/logout" > Log out </a> </li>
+      </ul>
+    </div>
   </div>
   #end
 </div>
