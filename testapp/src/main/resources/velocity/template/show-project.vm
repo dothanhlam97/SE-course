@@ -8,37 +8,71 @@
                 
                 <div style="background-color: #8080808c">
                     <div class="Banner-content PageDashboard-banner-localJobs-content">
-                        <h2 class="Banner-heading PageDashboard-banner-localJobs-heading">
+                        <h2 style="color: white" class="Banner-heading PageDashboard-banner-localJobs-heading">
                             Get more work doing local jobs
                         </h2>
                         <div class="Banner-body">
-                            <div class="PageDashboard-banner-localJobs-text">
+                            <div style="color: lightgrey" class="PageDashboard-banner-localJobs-text">
                                 From gardening to photography and more. You can earn money doing local jobs on Freelancer. Add local skills to your profile today!
-                            </div>
-                            <div class="PageDashboard-banner-localJobs-link">
-                                Add local skills →
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <section style="margin-top: 5%;" class="newsfeed-events Card PageDashboard-card">
-                <div class="PageDashboard-card-header">
-                    <h3 class="PageDashboard-card-title">Newsfeed</h3>
-                </div>
-                <div id="spiningOfDeath" style="display: none;">
-                    <div class="news-list-wrapper">
-                        <div class="Loader Loader--small Loader--full"></div>
-                        </div>
-                </div>
-                <span id="debug"></span>
-                <ul id="eventlist" class="opacity-0 in">
-                    <li class="view-all" style="display:none">
-                    </li>
-                    <li>
-                    </li>
-                </ul>
-            </section>
+            <div class="search-table table-responsive">
+                <table class="table table-bordered table-striped table-condensed">
+                    <thead class="bg-blue">
+                        <tr>
+                            <th>
+                                <a href="javascript:;">Status</a>
+                            </th>
+                            <th>
+                                <a href="javascript:;">Company</a>
+                            </th>
+                            <th>
+                                <a href="javascript:;">Project</a>
+                            </th>
+                            <th>
+                                <a href="javascript:;">Description</a>
+                            </th>
+                            <th>
+                                <a href="javascript:;">Salary</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-status">
+                                <button class="btn btn-blue">
+                                Join </button>
+                            </td>
+                            <td class="table-date font-blue">
+                                <span class="post-company" >Anduin</span>
+                            </td>
+                            <td class="table-title">
+                                <p class="post-company">
+                                    Project name dsbasjhdfgbj bla bla bla
+                                </p>
+                            </td>
+                            <td class="table-desc"> 
+                                <p class="post-company"> 
+                                    Requirement: </br>
+                                    Java Script , Nodejs ,... 
+
+                                </p>
+                                <p class="post-company post-company-small">  *More requiredment: </br>
+                                    Just woman
+                                </p>
+                            </td>
+                            <td class="table-download">
+                                <p class="post-company">
+                                    From 1000$ to 3000$
+                                <p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <h3 style="margin: 5%; font-family: Pacifico; font-size: 60px; text-align: center;">
                 All projects
             </h3>

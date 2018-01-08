@@ -190,8 +190,11 @@ public class IndexController {
             collection = database.getCollection("project");
             Document document = Document.parse(
                 "{\"name\": \"" + request.queryParams("name") + 
+                "\",\"company\": \"" + request.queryParams("company") + 
                 "\",\"about\": \"" + request.queryParams("about") + 
                 "\",\"requirement\": \"" + request.queryParams("requirement") + 
+                "\",\"requirement-more\": \"" + request.queryParams("requirement-more") + 
+                "\",\"salary\": \"" + request.queryParams("salary") + 
                 "\",\"Email\": \"" + email + "\"}");
             collection.insertOne(document);
             return ViewUtil.sendJsonContent(request, response, arrResponse);
@@ -205,13 +208,25 @@ public class IndexController {
         try {
             Map<String, Object> arrData = new HashMap<String, Object>();
             arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
-            String currentAccount = Account.getCurrentAccount();
-            arrData.put("current_account", currentAccount);
             MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
-            MongoCollection<Document> collection = database.getCollection("project");
-            FindIterable<Document> arrDocument = collection.find();
+            String currentAccount = Account.getCurrentAccount();
+            MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+            if (arrDocument != null) {
+                arrData.put("current_account", arrDocument.getString("Email"));
+                arrData.put("is_hire", arrDocument.getString("isHire"));
+                arrData.put("is_work", arrDocument.getString("isWork"));
+            } else {
+                arrData.put("current_account", "");
+                arrData.put("is_hire", "true");
+                arrData.put("is_work", "true");
+            }
+
+            
+            collection = database.getCollection("project");
+            FindIterable<Document> arrDocument_ = collection.find();
             List <JSONObject> project = new ArrayList<JSONObject>();
-            for (Document document : arrDocument) {
+            for (Document document : arrDocument_) {
                 if (document != null) {
                     project.add(new JSONObject(document));
                 }

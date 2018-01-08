@@ -8,7 +8,10 @@ $(document).ready(function() {
             data: { 
                 'name': $('#name-of-project').val(),
                 'about': $('#about-project').val(),
-                'requirement': $('#require-project').val()
+                'requirement': $('#require-project').val(),
+                'requirement-more': $('#require-more').val(),
+                'company': $('#name-of-company').val(),
+                'salary': $('#salary').val()
             },
             success: function() { 
                 // bootbox.alert("Post project success.");

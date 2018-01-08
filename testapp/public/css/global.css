@@ -819,21 +819,10 @@ body {
 }
 
 
-.post-project table {
-    border-collapse: separate;
-    background: #fff;
-    @include border-radius(5px);
-    margin: 50px auto;
-    @include box-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
-}
-
-.post-project thead {
-    @include border-radius(5px);
-}
 
 .post-project thead th {
-    font-family: 'Patua One', cursive;
-    font-size: 16px;
+    font-family: Lato;
+    font-size: 13px;
     font-weight: 400;
     color: #fff;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
@@ -1171,4 +1160,82 @@ Inherited from div.gaf-container.main-container .gaf-container {
 .gaf-container ::after,
 .gaf-container ::before {
     box-sizing: content-box;
+}
+.table-responsive {
+    overflow-x: auto;
+    min-height: .01%;
+}
+
+.table-bordered,
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border: 1px solid #e7ecf1;
+}
+
+element.style {}
+
+.table-bordered,
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border: 1px solid #e7ecf1;
+}
+
+.table-responsive {
+    padding-top: 5%;
+}
+
+.bg-blue {
+    background: #66b1d8!important;
+}
+
+.table-responsive tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.search-content-4 .search-table th>a {
+    color: #fff;
+}
+
+.table-bordered thead {
+    border-color: #66b2d8;
+}
+
+.table-responsive thead { 
+    font-family: Lato!important;
+    text-decoration: none; 
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.table-responsive thead a {
+    text-decoration: none;
+    color: black;
+    text-shadow: none;
+}
+
+.table-responsive thead a:hover {
+    text-decoration: none;
+    color: #464a4c;
+}
+
+.post-company {
+    font-family: Lato;
+    color: black;
+    font-size: 15px;   
+}
+
+.post-company-small {
+    font-style: italic;
+    font-size: 12px;
+    color: #484747;
 }

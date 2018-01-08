@@ -21,6 +21,14 @@
             </div>
             <div class="post-group">
                 <div class="post-title">
+                    About your company
+                </div>
+                <div class="post-content form-group form-md-line-input">
+                    <input id="name-of-company" style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="About your company... E.g. Anduin: working about transaction">
+                </div>
+            </div>
+            <div class="post-group">
+                <div class="post-title">
                     Tell us more about your project
                 </div>
                 <div class="post-content form-group form-md-line-input">
@@ -33,6 +41,22 @@
                 </div>
                 <div class="post-content form-group form-md-line-input">
                     <input id="require-project" style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="E.g. Javascript, Vue,...">
+                </div>
+            </div>
+            <div class="post-group">
+                <div class="post-title">
+                    More requirement
+                </div>
+                <div class="post-content form-group form-md-line-input">
+                    <input id="require-more" style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="E.g. Just woman">
+                </div>
+            </div>
+            <div class="post-group">
+                <div class="post-title">
+                    Salary 
+                </div>
+                <div class="post-content form-group form-md-line-input">
+                    <input id="salary" style="text-align: left;" text=type="text" class="" autofocus name="email" id="email" placeholder="Salary for freelancer">
                 </div>
             </div>
             <a href="">
