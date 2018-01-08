@@ -40,62 +40,62 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="postContent">
+                        #foreach( $item in $project )
                         <tr>
                             <td class="table-status">
-                                <button class="btn btn-blue">
+                                <button id="join-$item["_id"]"class="btn btn-blue">
                                 Join </button>
                             </td>
                             <td class="table-date font-blue">
-                                <span class="post-company" >Anduin</span>
+                                <span class="post-company" >
+                                #if ($item["company"])
+                                $item["company"]
+                                #end 
+                                </span>
                             </td>
                             <td class="table-title">
                                 <p class="post-company">
-                                    Project name dsbasjhdfgbj bla bla bla
+                                    #if ($item["name"] )
+                                    $item["name"] 
+                                    #end
                                 </p>
                             </td>
                             <td class="table-desc"> 
                                 <p class="post-company"> 
-                                    Requirement: </br>
-                                    Java Script , Nodejs ,... 
+                                    #if ($item["about"])
+                                        $item["about"]
+                                        </br> </br>
+                                    #end
+                                    #if ($item["requirement"])
+                                        Requirement: </br>
+                                        $item["requirement"]
+                                    #end
 
                                 </p>
-                                <p class="post-company post-company-small">  *More requiredment: </br>
-                                    Just woman
+                                <p class="post-company post-company-small">  
+                                    #if ($item["requirement-more"])
+                                    *More requirement: </br>
+                                    $item["requirement-more"]
+                                    #end
                                 </p>
                             </td>
                             <td class="table-download">
                                 <p class="post-company">
-                                    From 1000$ to 3000$
+                                   #if ($item["salary"])
+                                   $item["salary"]
+                                   #end 
                                 <p>
                             </td>
                         </tr>
+                        #end
                     </tbody>
                 </table>
             </div>
-            <h3 style="margin: 5%; font-family: Pacifico; font-size: 60px; text-align: center;">
-                All projects
-            </h3>
-            <table style="width: 100%; margin-top: 5%;"> 
-                <tr>
-                    <th style="border: 1px solid">Name of project</th>
-                    <th style="border: 1px solid">Description</th> 
-                    <th style="border: 1px solid">Requirement</th>
-                    <th style="border: 1px solid">Action</th>
-                </tr>
-                #foreach( $item in $project )
-                <tr>
-                    <th style="border: 1px solid">$item["name"]</th>
-                    <th style="border: 1px solid">$item["about"]</th>
-                    <th style="border: 1px solid">$item["requirement"]</th>
-                    <th style="border: 1px solid">
-                        <button class="btn btn-post-project btn-lg" style="font-size: 13px; font-family: Lato;"> Join
-                        </button>
-                    </th>
-                <tr>
-                #end
-            </table> 
         </div>
     </div>
 </body>
+<script id="postTemplate" type="text/x-handlebars-template">
+    
+</script> 
 #end
