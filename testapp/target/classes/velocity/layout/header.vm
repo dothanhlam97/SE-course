@@ -10,6 +10,8 @@
     <span class="header-button" style="font-weight: bold; color: black;"> Hire Freelancer </span>
     <span class="header-button" style="font-weight: bold; color: black;"> Find Work </span>
     #end
+
+  $is_hire $is_work
   </div>
   #if ($current_account == "")
   <div class="col-md-5 pull-right group">
@@ -30,7 +32,7 @@
       <ul class="dropdown-menu" style="margin-left: 75%; width: 25%; font-size: 12px; color: black">
         <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"  > <a href="$host_url/profile">Profile </a> </li>
         #if ($is_work == "true")
-        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Find work </li>
+        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> <a href="$host_url/show-project">Find work </a></li>
         #else 
         <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> 
         <a href="$host_url/post-project">Post your project </a></li>

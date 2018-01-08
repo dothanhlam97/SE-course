@@ -2,9 +2,45 @@
 #@mainLayout()
 <body>
     <div style="with: 100%;">
-        <div style="width: 60%; margin: auto;" class="post-project">
+        <div style="width: 60%; padding: 5% 0; margin: auto;" class="post-project gaf-container">
+            <div class="dashboard-tab-content hidden-title">
+            <div class="Banner Banner--light PageDashboard-banner-localJobs" style="background-size: 100%; background-image: url('$host_url/images/show-project1.jpg');">
+                
+                <div style="background-color: #8080808c">
+                    <div class="Banner-content PageDashboard-banner-localJobs-content">
+                        <h2 class="Banner-heading PageDashboard-banner-localJobs-heading">
+                            Get more work doing local jobs
+                        </h2>
+                        <div class="Banner-body">
+                            <div class="PageDashboard-banner-localJobs-text">
+                                From gardening to photography and more. You can earn money doing local jobs on Freelancer. Add local skills to your profile today!
+                            </div>
+                            <div class="PageDashboard-banner-localJobs-link">
+                                Add local skills →
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section style="margin-top: 5%;" class="newsfeed-events Card PageDashboard-card">
+                <div class="PageDashboard-card-header">
+                    <h3 class="PageDashboard-card-title">Newsfeed</h3>
+                </div>
+                <div id="spiningOfDeath" style="display: none;">
+                    <div class="news-list-wrapper">
+                        <div class="Loader Loader--small Loader--full"></div>
+                        </div>
+                </div>
+                <span id="debug"></span>
+                <ul id="eventlist" class="opacity-0 in">
+                    <li class="view-all" style="display:none">
+                    </li>
+                    <li>
+                    </li>
+                </ul>
+            </section>
             <h3 style="margin: 5%; font-family: Pacifico; font-size: 60px; text-align: center;">
-                All your projects
+                All projects
             </h3>
             <table style="width: 100%; margin-top: 5%;"> 
                 <tr>
@@ -19,9 +55,7 @@
                     <th style="border: 1px solid">$item["about"]</th>
                     <th style="border: 1px solid">$item["requirement"]</th>
                     <th style="border: 1px solid">
-                        <button class="btn btn-post-project btn-lg" style="font-size: 13px; font-family: Lato;"> Edit
-                        </button>
-                        <button class="btn btn-post-project btn-lg"> Remove
+                        <button class="btn btn-post-project btn-lg" style="font-size: 13px; font-family: Lato;"> Join
                         </button>
                     </th>
                 <tr>

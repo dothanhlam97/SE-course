@@ -1,8 +1,9 @@
 #parse("/velocity/layout/index.vm")
 #@mainLayout()
 <body>
-    <div style="height: 80vh; background-size: 100%; background: url('$host_url/images/background.png');" class="row">
+    <div style="height: 80vh; background-size: 100%; background-image: url('$host_url/images/background.png');" class="row">
         <div style="background-color: #00bcd445; width: 100%;">
+            
             <div style="display: flex; width: 100%;">
                 <div class="container-fluid" style="text-align: center;">
                     <h4 style="padding: 15px; font-family: Pacifico; font-size: 40px; margin-top: 30%;">
@@ -16,14 +17,14 @@
                     <a href="$host_url/post-project"> 
                         <button class="btn btn-blue" style="text-transform: uppercase;">I want to hire</button>
                     </a>
-                    <button class="btn btn-blue-outline" style="text-transform: uppercase;">I want to work</button>
+                    <button class="btn btn-blue-outline" style="text-transform: uppercase;"> <a href="$host_url/show-project">I want to work</a></button>
                     #else
                     #if ($is_hire == "true")
                         <a href="$host_url/post-project"> 
-                        <button class="btn btn-blue" style="fon-size: 15px; text-transform: uppercase;">I want to hire</button>
+                        <button class="btn btn-blue" style="fon-size: 15px; text-transform: uppercase;"><a>I want to hire</a></button>
                     </a>
                     #else
-                        <button class="btn btn-blue-outline" style="font-size: 15px; text-transform: uppercase;">I want to work</button>
+                        <button class="btn btn-blue-outline" style="font-size: 15px; text-transform: uppercase;"><a>I want to work</a></button>
                     #end 
                     #end
                 </div>

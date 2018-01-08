@@ -171,7 +171,7 @@ public class IndexController {
             Document arrDocument = collection.find(eq("Email", currentAccount)).first();
             String email = arrDocument.getString("Email");
             collection = database.getCollection("curentAccount");
-            collection.deleteOne(eq("Email", email));
+            collection.drop();
             return ViewUtil.sendJsonContent(request, response, arrResponse);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -209,7 +209,7 @@ public class IndexController {
             arrData.put("current_account", currentAccount);
             MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
             MongoCollection<Document> collection = database.getCollection("project");
-            FindIterable<Document> arrDocument = collection.find(eq("Email", currentAccount));
+            FindIterable<Document> arrDocument = collection.find();
             List <JSONObject> project = new ArrayList<JSONObject>();
             for (Document document : arrDocument) {
                 if (document != null) {
