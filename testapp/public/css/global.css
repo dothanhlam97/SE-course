@@ -72,6 +72,16 @@
     text-transform: uppercase;
 }
 
+.btn.btn-red {
+    color: #fff;
+    background-color: #ee7070;
+    border-color: #ee7070;
+    font-size: 10px;
+    font-family: Lato;
+    margin: 0 5px;
+    text-transform: uppercase;
+}
+
 .btn-blue:hover {
     cursor: all-scroll;
 }

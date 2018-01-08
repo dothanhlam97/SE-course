@@ -12,6 +12,7 @@ public class Path {
         public static final String LOGOUT = "/log-out";
         public static final String POST_PROJECT = "/post-one-project";
         public static final String SHOW_PROJECT = "/show-project";
+        public static final String JOIN_PROJECT = "/join-a-job";
     }
 
     public static class Template {

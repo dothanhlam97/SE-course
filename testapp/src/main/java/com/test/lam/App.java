@@ -35,5 +35,6 @@ public class App
         post(Path.Web.LOGOUT, IndexController.postLogOut);
         post(Path.Web.POST_PROJECT, IndexController.postProject);
         get(Path.Web.SHOW_PROJECT, IndexController.showListProject);
+        post(Path.Web.JOIN_PROJECT, IndexController.joinProject);
     }
 }

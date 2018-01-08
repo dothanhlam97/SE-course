@@ -12,6 +12,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
+import com.mongodb.BasicDBObject;
 import static com.mongodb.client.model.Filters.*;
 import static com.mongodb.client.model.Updates.*;
 
@@ -220,15 +221,25 @@ public class IndexController {
                 arrData.put("current_account", "");
                 arrData.put("is_hire", "true");
                 arrData.put("is_work", "true");
-            }
-
-            
+            } 
+            String current_account = arrDocument.getString("Email");          
             collection = database.getCollection("project");
+            MongoCollection<Document> collection2 = database.getCollection("join-project");
             FindIterable<Document> arrDocument_ = collection.find();
             List <JSONObject> project = new ArrayList<JSONObject>();
             for (Document document : arrDocument_) {
                 if (document != null) {
-                    project.add(new JSONObject(document));
+                    JSONObject json = new JSONObject(document);
+                    BasicDBObject andQuery = new BasicDBObject();
+                    List<BasicDBObject> obj = new ArrayList<BasicDBObject>();
+                    obj.add(new BasicDBObject("Email", currentAccount));
+                    obj.add(new BasicDBObject("id-project", json.get("_id").toString()) );
+                    andQuery.put("$and", obj);
+                    if (collection2.find(andQuery).first() != null) 
+                        json.put("check", true); 
+                    else 
+                        json.put("check", false);
+                    project.add(json);
                 }
             }
             arrData.put("project", project);
@@ -241,5 +252,26 @@ public class IndexController {
         }
     }; 
 
+    public static Route joinProject = (Request request, Response response) -> {
+        try {
+            Map<String, Object> arrResponse = new HashMap<String, Object>();
+            MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+            String currentAccount = Account.getCurrentAccount();
+            MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+            if (arrDocument == null) {
+                return ViewUtil.sendJsonContent(request, response, arrResponse);
+            };
+            String current_account = arrDocument.getString("Email");
+            collection = database.getCollection("join-project");
+            Document document = Document.parse(
+            "{\"Email\":\""+ current_account +"\", \"id-project\" : \""+ request.queryParams("id_project") +"\"}");
+            collection.insertOne(document);
+            return ViewUtil.sendJsonContent(request, response, arrResponse);
 
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    };
 }
