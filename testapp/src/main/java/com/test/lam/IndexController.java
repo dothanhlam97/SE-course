@@ -25,6 +25,22 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 public class IndexController {
+
+
+    public static Boolean checkWork(String currentAccount) { 
+        MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+        MongoCollection<Document> collection = database.getCollection("accounts");
+        Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+        return (arrDocument.getString("isWork") == "true");
+    }
+
+    public static Boolean checkHire(String currentAccount) { 
+        MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+        MongoCollection<Document> collection = database.getCollection("accounts");
+        Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+        return (arrDocument.getString("isHire") == "true");
+    }
+
     public static Route getIndex = (Request request, Response response) -> { 
         try {
             Map<String, Object> arrData = new HashMap<String, Object>();
@@ -189,6 +205,9 @@ public class IndexController {
         try {
             Map<String, Object> arrResponse = new HashMap<>();
             String currentAccount = Account.getCurrentAccount();
+            if (checkHire(currentAccount) == false) {
+                return ViewUtil.sendJsonContent(request, response, arrResponse);
+            }
             MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
             MongoCollection<Document> collection = database.getCollection("accounts");
             Document arrDocument = collection.find(eq("Email", currentAccount)).first();
@@ -267,6 +286,10 @@ public class IndexController {
             arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
             MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
             String currentAccount = Account.getCurrentAccount();
+            if (checkHire(currentAccount) == false) {
+                return ViewUtil.sendUtf8HtmlContent(request, response,
+                        ViewUtil.render(request, arrData, Path.Template.NONE));
+            }
             MongoCollection<Document> collection = database.getCollection("accounts");
             Document arrDocument = collection.find(eq("Email", currentAccount)).first();
             if (arrDocument != null) {
@@ -310,6 +333,10 @@ public class IndexController {
             arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
             MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
             String currentAccount = Account.getCurrentAccount();
+            if (checkWork(currentAccount) == false) {
+                return ViewUtil.sendUtf8HtmlContent(request, response,
+                        ViewUtil.render(request, arrData, Path.Template.NONE));
+            }
             MongoCollection<Document> collection = database.getCollection("accounts");
             Document arrDocument = collection.find(eq("Email", currentAccount)).first();
             if (arrDocument != null) {
