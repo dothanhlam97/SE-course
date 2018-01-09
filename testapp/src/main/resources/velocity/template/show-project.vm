@@ -44,14 +44,22 @@
                         #foreach( $item in $project )
                         <tr>
                             <td class="table-status">
-                                #if ($item["check"] == false)
-                                <button id="join-$item["_id"]"class="btn btn-blue btn-join-job">
-                                Join 
-                                </button>
+                                #if ($item["status"])
+                                    #if ($item["status"] == "offer")
+                                        <div style="color: #337ab7; font-weight: bold;"> Offered </div>
+                                    #else 
+                                        <div style="color: #ee7070; font-weight: bold;"> Rejected </div>
+                                    #end
                                 #else 
-                                <button id="cancel-$item["_id"]"class="btn btn-red btn-cancel-job">
-                                Cancel 
-                                </button>
+                                    #if ($item["check"] == false)
+                                    <button id="join-$item["_id"]"class="btn btn-blue btn-join-job">
+                                    Join 
+                                    </button>
+                                    #else 
+                                    <button id="cancel-$item["_id"]"class="btn btn-red btn-cancel-job">
+                                    Cancel 
+                                    </button>
+                                    #end
                                 #end
                             </td>
                             <td class="table-date font-blue">

@@ -40,7 +40,19 @@
                             <div style="color: #4f4e4f; font-family: Lato; margin-left: 10px;"> $item["company"] </div>
                         </td>
                         <td class="hidden-xs"> $item["Date"] </td>
-                        <td style="color: #66b2d8"> Pending </td>
+                        <td style="color: #66b2d8">
+                        
+                        #if ($item["status"]) 
+                            #if ($item["status"] == "offer") 
+                                <div style="color: #337ab7"> Offered </div>
+                            #else 
+                                <div style="color: #ee7070"> Reject </div>
+                            #end
+                        #else 
+                            Pending
+                        #end 
+                         
+                        </td>
                         <td>
                             <button class="btn btn-red btn-outline btn-circle btn-sm purple">
                                 Cancel 

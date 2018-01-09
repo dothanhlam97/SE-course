@@ -43,6 +43,19 @@
   font-style: normal;
 }
 
+.non-decoration { 
+    text-decoration: none; 
+    color: white;
+}
+
+.non-decoration:hover 
+.non-decoration:focus 
+.non-decoration:visited 
+.non-decoration:link { 
+    text-decoration: none;
+    color: white;
+}
+
 .header-block {
     height: 50px;
     border-bottom: 1px solid lightgrey;

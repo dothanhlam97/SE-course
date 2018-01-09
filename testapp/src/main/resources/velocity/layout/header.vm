@@ -8,8 +8,8 @@
     
     <div class="col-md-5 pull-left group" style="margin-top: 15px;">
       #if ($current_account == "")
-      <span class="header-button" style="font-weight: bold; color: black;"> Hire Freelancer </span>
-      <span class="header-button" style="font-weight: bold; color: black;"> Find Work </span>
+      <span class="header-button" style="font-weight: bold; color: black;"> <a href="$host_url/login"> Hire Freelancer </a> </span>
+      <span class="header-button" style="font-weight: bold; color: black;"> <a href="$host_url/login"> Find Work </a> </span>
       #end
     </div>
     #if ($current_account == "")

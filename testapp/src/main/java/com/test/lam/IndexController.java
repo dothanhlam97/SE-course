@@ -240,8 +240,12 @@ public class IndexController {
                     obj.add(new BasicDBObject("Email", currentAccount));
                     obj.add(new BasicDBObject("id-project", json.get("_id").toString()) );
                     andQuery.put("$and", obj);
-                    if (collection2.find(andQuery).first() != null) 
+                    Document newDoc = collection2.find(andQuery).first();
+                    if (newDoc != null) { 
+                        JSONObject new_json = new JSONObject(newDoc);
+                        json.put("status", new_json.get("status").toString());
                         json.put("check", true); 
+                    }
                     else 
                         json.put("check", false);
                     project.add(json);
@@ -325,12 +329,12 @@ public class IndexController {
             for (Document document : arrDocument_) {
                 if (document != null) {
                     JSONObject json = new JSONObject(document);
-                    project.add(json);
                     ObjectId objId = new ObjectId(json.get("id-project").toString());
                     arrDocument = collection.find(eq("_id", objId)).first();
                     if (arrDocument != null) {
                         json.put("company", arrDocument.getString("name"));
                     }
+                    project.add(json);
                 }
             }
             arrData.put("project", project);

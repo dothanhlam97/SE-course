@@ -15,13 +15,12 @@
                     </h6>
                     #if ($current_account == "")
                     <a href="$host_url/post-project"> 
-                        <button class="btn btn-blue" style="text-transform: uppercase;">I want to hire</button>
+                        <button class="btn btn-blue" style="text-transform: uppercase;"> <a href="$host_url/login"> I want to hire </a> </button>
                     </a>
-                    <button class="btn btn-blue-outline" style="text-transform: uppercase;"> <a href="$host_url/show-project">I want to work</a></button>
+                    <button class="btn btn-blue-outline" style="text-transform: uppercase;"> <a href="$host_url/login">I want to work</a></button>
                     #else
                     #if ($is_hire == "true")
-                        <a href="$host_url/post-project"> 
-                        <button class="btn btn-blue" style="fon-size: 15px; text-transform: uppercase;"><a>I want to hire</a></button>
+                        <button class="btn btn-blue" style="fon-size: 15px; text-transform: uppercase;"><a class="non-decoration" href="$host_url/list-freelancer-applied">I want to hire</a></button>
                     </a>
                     #else
                         <button class="btn btn-blue-outline" style="font-size: 15px; text-transform: uppercase;"><a href="$host_url/show-project">I want to work</a></button>
