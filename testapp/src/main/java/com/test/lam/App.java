@@ -36,6 +36,7 @@ public class App
         post(Path.Web.POST_PROJECT, IndexController.postProject);
         get(Path.Web.SHOW_PROJECT, IndexController.showListProject);
         get(Path.Web.JOB_APPLIED, IndexController.showListJobApplied);
+        get(Path.Web.FREELANCER_APPLIED, IndexController.showListFreelancerApplied);
         post(Path.Web.JOIN_PROJECT, IndexController.joinProject);
         post(Path.Web.CANCEL_PROJECT, IndexController.cancelProject);
     }

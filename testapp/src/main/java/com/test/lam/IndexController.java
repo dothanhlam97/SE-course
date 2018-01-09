@@ -255,6 +255,50 @@ public class IndexController {
             return null;
         }
     }; 
+    
+    public static Route showListFreelancerApplied = (Request request, Response response) -> {
+        try {
+            Map<String, Object> arrData = new HashMap<String, Object>();
+            arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
+            MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+            String currentAccount = Account.getCurrentAccount();
+            MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+            if (arrDocument != null) {
+                arrData.put("current_account", arrDocument.getString("Email"));
+                arrData.put("is_hire", arrDocument.getString("isHire"));
+                arrData.put("is_work", arrDocument.getString("isWork"));
+            } else {
+                arrData.put("current_account", "");
+                arrData.put("is_hire", "true");
+                arrData.put("is_work", "true");
+            } 
+            String current_account = arrDocument.getString("Email");          
+            MongoCollection<Document> collection2 = database.getCollection("join-project");
+            collection = database.getCollection("project");
+            FindIterable<Document> listDocument = collection.find(eq("Email", currentAccount));
+            List<JSONObject> project = new ArrayList<JSONObject>();
+            for (Document document : listDocument) { 
+                if (document != null) {
+                    FindIterable<Document> listJoin = collection2.find(eq("id-project", document.getObjectId("_id").toString()));
+                    for (Document joiner : listJoin) {
+                        JSONObject json = new JSONObject(joiner);
+                        json.put("name", document.getString("name"));
+                        project.add(json);
+                    }
+                }
+            }            
+            arrData.put("project", project);
+            System.out.print(project);
+            return ViewUtil.sendUtf8HtmlContent(request, response,
+                    ViewUtil.render(request, arrData, Path.Template.FREELANCER_APPLIED));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }; 
+    
     public static Route showListJobApplied = (Request request, Response response) -> {
         try {
             Map<String, Object> arrData = new HashMap<String, Object>();

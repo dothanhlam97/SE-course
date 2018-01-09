@@ -15,6 +15,7 @@ public class Path {
         public static final String JOIN_PROJECT = "/join-a-job";
         public static final String CANCEL_PROJECT = "/cancel-a-job";
         public static final String JOB_APPLIED = "/list-job-applied";
+        public static final String FREELANCER_APPLIED = "/list-freelancer-applied";
     }
 
     public static class Template {
@@ -24,6 +25,7 @@ public class Path {
         public final static String POST_PROJECT_PAGE = "velocity/template/post-project.vm";
         public final static String PROFILE = "velocity/template/profile.vm";
         public final static String SHOW_PROJECT = "velocity/template/show-project.vm";
-        public final static String JOB_APPLIED = "velocity/template/list-job-applied.vm";
+        public final static String FREELANCER_APPLIED = "velocity/template/list-freelancer-applied.vm";
+        public final static String JOB_APPLIED = "velocity/template/list-freelancer-applied.vm";
     }
 }

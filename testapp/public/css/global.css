@@ -80,6 +80,7 @@
     font-family: Lato;
     margin: 0 5px;
     text-transform: uppercase;
+    cursor: all-scroll;
 }
 
 .btn-blue:hover {

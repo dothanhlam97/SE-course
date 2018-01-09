@@ -192,3 +192,501 @@
 2018-01-09 09:30:46,967 - ResourceManager : found /velocity/layout/post-project.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
 2018-01-09 09:30:46,970 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
 2018-01-09 09:30:46,970 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:37,188 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:32:37,189 - Initializing Velocity, Calling init()...
+2018-01-09 09:32:37,189 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:32:37,189 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:32:37,189 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:32:37,189 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:32:37,191 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:37,201 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:32:37,202 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:32:37,203 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:32:37,203 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:32:37,204 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:32:37,204 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:32:37,205 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:32:37,205 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:32:37,206 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:32:37,207 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:32:37,228 - Created '32' parsers.
+2018-01-09 09:32:37,231 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:32:37,231 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:32:37,231 - Velocimacro : Default library not found.
+2018-01-09 09:32:37,231 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:32:37,231 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:32:37,231 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:32:37,231 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:32:37,244 - ResourceManager : found velocity/template/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:37,247 - Velocimacro : added VM mainLayout: source=/velocity/layout/index.vm
+2018-01-09 09:32:37,247 - ResourceManager : found /velocity/layout/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:37,251 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:42,810 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:32:42,810 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:32:42,811 - Initializing Velocity, Calling init()...
+2018-01-09 09:32:42,811 - Initializing Velocity, Calling init()...
+2018-01-09 09:32:42,811 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:32:42,811 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:32:42,811 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:32:42,811 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:32:42,811 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:32:42,811 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:32:42,811 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:32:42,811 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:32:42,812 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:42,812 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:42,812 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:32:42,812 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:32:42,813 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:32:42,815 - Created '32' parsers.
+2018-01-09 09:32:42,815 - Created '32' parsers.
+2018-01-09 09:32:42,815 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:32:42,815 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:32:42,815 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:32:42,815 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:32:42,815 - Velocimacro : Default library not found.
+2018-01-09 09:32:42,815 - Velocimacro : Default library not found.
+2018-01-09 09:32:42,815 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:32:42,815 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:32:42,815 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:32:42,815 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:32:42,815 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:32:42,815 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:32:42,815 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:32:42,815 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:32:42,817 - ResourceManager : found velocity/template/login.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:42,817 - ResourceManager : found velocity/template/login.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:42,819 - Velocimacro : added VM mainLayout: source=/velocity/layout/login.vm
+2018-01-09 09:32:42,819 - Velocimacro : added VM mainLayout: source=/velocity/layout/login.vm
+2018-01-09 09:32:42,819 - ResourceManager : found /velocity/layout/login.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:42,819 - ResourceManager : found /velocity/layout/login.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:42,821 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:42,821 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:32:42,821 - Null reference [template '/velocity/layout/header.vm', line 15, column 5] : $is_hire cannot be resolved.
+2018-01-09 09:32:42,821 - Null reference [template '/velocity/layout/header.vm', line 15, column 5] : $is_hire cannot be resolved.
+2018-01-09 09:32:42,822 - Null reference [template '/velocity/layout/header.vm', line 15, column 14] : $is_work cannot be resolved.
+2018-01-09 09:32:42,822 - Null reference [template '/velocity/layout/header.vm', line 15, column 14] : $is_work cannot be resolved.
+2018-01-09 09:33:05,256 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:33:05,256 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:33:05,256 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:33:05,259 - Initializing Velocity, Calling init()...
+2018-01-09 09:33:05,259 - Initializing Velocity, Calling init()...
+2018-01-09 09:33:05,259 - Initializing Velocity, Calling init()...
+2018-01-09 09:33:05,259 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:33:05,259 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:33:05,259 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:33:05,260 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:33:05,260 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:33:05,260 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:33:05,260 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:33:05,260 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:33:05,260 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:33:05,260 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:33:05,260 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:33:05,260 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:33:05,260 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:33:05,260 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:33:05,260 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:33:05,260 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:33:05,260 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:33:05,260 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:33:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:33:05,262 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:33:05,262 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:33:05,262 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:33:05,262 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:33:05,262 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:33:05,262 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:33:05,263 - Created '32' parsers.
+2018-01-09 09:33:05,263 - Created '32' parsers.
+2018-01-09 09:33:05,263 - Created '32' parsers.
+2018-01-09 09:33:05,264 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:33:05,264 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:33:05,264 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:33:05,264 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:33:05,264 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:33:05,264 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:33:05,264 - Velocimacro : Default library not found.
+2018-01-09 09:33:05,264 - Velocimacro : Default library not found.
+2018-01-09 09:33:05,264 - Velocimacro : Default library not found.
+2018-01-09 09:33:05,264 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:33:05,264 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:33:05,264 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:33:05,264 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:33:05,264 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:33:05,264 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:33:05,264 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:33:05,264 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:33:05,264 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:33:05,264 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:33:05,264 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:33:05,264 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:33:05,267 - ResourceManager : found velocity/template/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:33:05,267 - ResourceManager : found velocity/template/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:33:05,267 - ResourceManager : found velocity/template/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:33:05,268 - Velocimacro : added VM mainLayout: source=/velocity/layout/index.vm
+2018-01-09 09:33:05,268 - Velocimacro : added VM mainLayout: source=/velocity/layout/index.vm
+2018-01-09 09:33:05,268 - Velocimacro : added VM mainLayout: source=/velocity/layout/index.vm
+2018-01-09 09:33:05,268 - ResourceManager : found /velocity/layout/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:33:05,268 - ResourceManager : found /velocity/layout/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:33:05,268 - ResourceManager : found /velocity/layout/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:33:05,271 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:33:05,271 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:33:05,271 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:13,920 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:37:13,921 - Initializing Velocity, Calling init()...
+2018-01-09 09:37:13,921 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:37:13,921 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:37:13,921 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:37:13,921 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:37:13,923 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:13,931 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:37:13,932 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:37:13,933 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:37:13,933 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:37:13,934 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:37:13,934 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:37:13,935 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:37:13,936 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:37:13,936 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:37:13,937 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:37:13,958 - Created '32' parsers.
+2018-01-09 09:37:13,961 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:37:13,962 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:37:13,962 - Velocimacro : Default library not found.
+2018-01-09 09:37:13,962 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:37:13,962 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:37:13,962 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:37:13,962 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:37:13,975 - ResourceManager : found velocity/template/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:13,978 - Velocimacro : added VM mainLayout: source=/velocity/layout/index.vm
+2018-01-09 09:37:13,978 - ResourceManager : found /velocity/layout/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:13,982 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:25,820 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:37:25,820 - Initializing Velocity, Calling init()...
+2018-01-09 09:37:25,820 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:37:25,820 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:37:25,820 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:37:25,820 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:37:25,820 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:25,820 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:37:25,821 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:37:25,821 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:37:25,821 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:37:25,821 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:37:25,821 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:37:25,821 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:37:25,821 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:37:25,821 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:37:25,821 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:37:25,824 - Created '32' parsers.
+2018-01-09 09:37:25,824 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:37:25,824 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:37:25,824 - Velocimacro : Default library not found.
+2018-01-09 09:37:25,824 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:37:25,824 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:37:25,824 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:37:25,824 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:37:25,827 - ResourceManager : found velocity/template/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:25,829 - Velocimacro : added VM mainLayout: source=/velocity/layout/index.vm
+2018-01-09 09:37:25,829 - ResourceManager : found /velocity/layout/index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:25,831 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:39,464 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:37:39,464 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:37:39,469 - Initializing Velocity, Calling init()...
+2018-01-09 09:37:39,469 - Initializing Velocity, Calling init()...
+2018-01-09 09:37:39,470 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:37:39,470 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:37:39,470 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:37:39,470 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:37:39,470 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:37:39,470 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:37:39,470 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:37:39,470 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:37:39,470 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:39,470 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:39,470 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:37:39,470 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:37:39,472 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:37:39,474 - Created '32' parsers.
+2018-01-09 09:37:39,474 - Created '32' parsers.
+2018-01-09 09:37:39,474 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:37:39,474 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:37:39,474 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:37:39,474 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:37:39,474 - Velocimacro : Default library not found.
+2018-01-09 09:37:39,474 - Velocimacro : Default library not found.
+2018-01-09 09:37:39,474 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:37:39,474 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:37:39,475 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:37:39,475 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:37:39,475 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:37:39,475 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:37:39,475 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:37:39,475 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:37:39,480 - ResourceManager : found velocity/template/list-freelancer-applied.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:39,480 - ResourceManager : found velocity/template/list-freelancer-applied.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:39,481 - Velocimacro : added VM mainLayout: source=/velocity/layout/post-project.vm
+2018-01-09 09:37:39,481 - Velocimacro : added VM mainLayout: source=/velocity/layout/post-project.vm
+2018-01-09 09:37:39,481 - ResourceManager : found /velocity/layout/post-project.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:39,481 - ResourceManager : found /velocity/layout/post-project.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:39,483 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:37:39,483 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:51:15,758 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:51:15,758 - Initializing Velocity, Calling init()...
+2018-01-09 09:51:15,758 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:51:15,758 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:51:15,758 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:51:15,758 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:51:15,761 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:51:15,769 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:51:15,770 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:51:15,771 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:51:15,771 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:51:15,772 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:51:15,772 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:51:15,772 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:51:15,773 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:51:15,774 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:51:15,775 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:51:15,797 - Created '32' parsers.
+2018-01-09 09:51:15,800 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:51:15,800 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:51:15,800 - Velocimacro : Default library not found.
+2018-01-09 09:51:15,800 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:51:15,800 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:51:15,800 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:51:15,800 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:51:15,811 - ResourceManager : found velocity/template/list-freelancer-applied.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:51:15,814 - Velocimacro : added VM mainLayout: source=/velocity/layout/post-project.vm
+2018-01-09 09:51:15,814 - ResourceManager : found /velocity/layout/post-project.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:51:15,819 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:51:51,999 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:51:51,999 - Initializing Velocity, Calling init()...
+2018-01-09 09:51:51,999 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:51:51,999 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:51:51,999 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:51:51,999 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:51:52,002 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:51:52,013 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:51:52,014 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:51:52,014 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:51:52,015 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:51:52,015 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:51:52,016 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:51:52,016 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:51:52,017 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:51:52,018 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:51:52,018 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:51:52,040 - Created '32' parsers.
+2018-01-09 09:51:52,044 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:51:52,044 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:51:52,044 - Velocimacro : Default library not found.
+2018-01-09 09:51:52,045 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:51:52,045 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:51:52,045 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:51:52,045 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:51:52,055 - ResourceManager : found velocity/template/list-freelancer-applied.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:51:52,059 - Velocimacro : added VM mainLayout: source=/velocity/layout/post-project.vm
+2018-01-09 09:51:52,059 - ResourceManager : found /velocity/layout/post-project.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:51:52,064 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:52:08,485 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:52:08,486 - Initializing Velocity, Calling init()...
+2018-01-09 09:52:08,486 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:52:08,486 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:52:08,486 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:52:08,486 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:52:08,489 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:52:08,497 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:52:08,499 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:52:08,500 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:52:08,501 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:52:08,501 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:52:08,502 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:52:08,503 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:52:08,504 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:52:08,505 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:52:08,506 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:52:08,526 - Created '32' parsers.
+2018-01-09 09:52:08,530 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:52:08,531 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:52:08,531 - Velocimacro : Default library not found.
+2018-01-09 09:52:08,531 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:52:08,531 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:52:08,531 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:52:08,531 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:52:08,544 - ResourceManager : found velocity/template/list-freelancer-applied.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:52:08,548 - Velocimacro : added VM mainLayout: source=/velocity/layout/post-project.vm
+2018-01-09 09:52:08,548 - ResourceManager : found /velocity/layout/post-project.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:52:08,553 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:53:12,959 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:53:12,959 - Initializing Velocity, Calling init()...
+2018-01-09 09:53:12,959 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:53:12,959 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:53:12,959 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:53:12,959 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:53:12,962 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:53:12,970 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:53:12,971 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:53:12,972 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:53:12,972 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:53:12,973 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:53:12,973 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:53:12,974 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:53:12,974 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:53:12,976 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:53:12,976 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:53:13,010 - Created '32' parsers.
+2018-01-09 09:53:13,014 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:53:13,014 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:53:13,014 - Velocimacro : Default library not found.
+2018-01-09 09:53:13,014 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:53:13,014 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:53:13,014 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:53:13,014 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:53:13,026 - ResourceManager : found velocity/template/list-freelancer-applied.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:53:13,029 - Velocimacro : added VM mainLayout: source=/velocity/layout/post-project.vm
+2018-01-09 09:53:13,029 - ResourceManager : found /velocity/layout/post-project.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:53:13,033 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:53:57,897 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:53:57,898 - Initializing Velocity, Calling init()...
+2018-01-09 09:53:57,898 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:53:57,898 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:53:57,898 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:53:57,898 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:53:57,900 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:53:57,908 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:53:57,909 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:53:57,910 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:53:57,910 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:53:57,911 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:53:57,911 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:53:57,912 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:53:57,913 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:53:57,913 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:53:57,914 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:53:57,934 - Created '32' parsers.
+2018-01-09 09:53:57,938 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:53:57,938 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:53:57,938 - Velocimacro : Default library not found.
+2018-01-09 09:53:57,938 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:53:57,938 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:53:57,938 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:53:57,938 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:53:57,951 - ResourceManager : found velocity/template/list-freelancer-applied.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:53:57,954 - Velocimacro : added VM mainLayout: source=/velocity/layout/post-project.vm
+2018-01-09 09:53:57,954 - ResourceManager : found /velocity/layout/post-project.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:53:57,960 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:53:57,966 - Null reference [template 'velocity/template/list-freelancer-applied.vm', line 40, column 97] : $item["company"] cannot be resolved.
+2018-01-09 09:55:41,179 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:55:41,179 - Initializing Velocity, Calling init()...
+2018-01-09 09:55:41,179 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:55:41,179 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:55:41,179 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:55:41,179 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:55:41,182 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:55:41,190 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:55:41,191 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:55:41,192 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:55:41,192 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:55:41,193 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:55:41,193 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:55:41,194 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:55:41,194 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:55:41,195 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:55:41,196 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:55:41,216 - Created '32' parsers.
+2018-01-09 09:55:41,220 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:55:41,221 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:55:41,221 - Velocimacro : Default library not found.
+2018-01-09 09:55:41,221 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:55:41,221 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:55:41,221 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:55:41,221 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:55:41,231 - ResourceManager : found velocity/template/list-freelancer-applied.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:55:41,234 - Velocimacro : added VM mainLayout: source=/velocity/layout/post-project.vm
+2018-01-09 09:55:41,234 - ResourceManager : found /velocity/layout/post-project.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:55:41,239 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:57:36,872 - Log4JLogChute initialized using file 'logs/velocity.log'
+2018-01-09 09:57:36,872 - Initializing Velocity, Calling init()...
+2018-01-09 09:57:36,872 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-01-09 09:57:36,872 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2018-01-09 09:57:36,872 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:57:36,872 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-01-09 09:57:36,875 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:57:36,883 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-01-09 09:57:36,884 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-01-09 09:57:36,885 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-01-09 09:57:36,885 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-01-09 09:57:36,886 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-01-09 09:57:36,886 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-01-09 09:57:36,887 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-01-09 09:57:36,887 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-01-09 09:57:36,888 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-01-09 09:57:36,889 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-01-09 09:57:36,909 - Created '32' parsers.
+2018-01-09 09:57:36,913 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-01-09 09:57:36,913 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-01-09 09:57:36,913 - Velocimacro : Default library not found.
+2018-01-09 09:57:36,913 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-01-09 09:57:36,913 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-01-09 09:57:36,913 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-01-09 09:57:36,913 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-01-09 09:57:36,924 - ResourceManager : found velocity/template/list-freelancer-applied.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:57:36,928 - Velocimacro : added VM mainLayout: source=/velocity/layout/post-project.vm
+2018-01-09 09:57:36,928 - ResourceManager : found /velocity/layout/post-project.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-01-09 09:57:36,933 - ResourceManager : found /velocity/layout/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
