@@ -44,9 +44,9 @@
                         <td>
                             #if ($item["status"]) 
                                 #if ($item["status"] == "offer")
-                                    <div style="color: #337ab7"> Offered </div>
+                                    <div style="color: #337ab7; font-weight: bold;"> Offered </div>
                                 #else 
-                                    <div style="color: #ee7070"> Offered </div>
+                                    <div style="color: #ee7070; font-weight: bold;"> Rejected </div>
                                 #end
                             #else
                             <button id="offer-$item["_id"]" style="width: 40px; margin: 5px;" class="btn btn-blue btn-outline btn-circle btn-sm purple btn-offer">

@@ -11,8 +11,6 @@
       <span class="header-button" style="font-weight: bold; color: black;"> Hire Freelancer </span>
       <span class="header-button" style="font-weight: bold; color: black;"> Find Work </span>
       #end
-
-    $is_hire $is_work
     </div>
     #if ($current_account == "")
     <div class="col-md-5 pull-right group">
@@ -37,8 +35,10 @@
           <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> <a href="$host_url/list-job-applied">List job applied </a></li>
           #else 
           <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> 
-          <a href="$host_url/post-project">Post your project </a></li>
-          <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Hire freelancer </li>
+            <a href="$host_url/post-project">Post your project </a>
+          </li>
+          <li class="header-button" style="margin-left: 10%;margin-bottom: 5%;"> <a href="$host_url/list-freelancer-applied">Hire freelancer </a></li>
+          <li class="header-button" style="margin-left: 10%;margin-bottom: 5%;"> <a href="$host_url/show-project">All project </a></li>
           #end
           <li id="btn-log-out" class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Log out</li>
         </ul>

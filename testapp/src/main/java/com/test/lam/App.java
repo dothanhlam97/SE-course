@@ -40,5 +40,6 @@ public class App
         post(Path.Web.JOIN_PROJECT, IndexController.joinProject);
         post(Path.Web.CANCEL_PROJECT, IndexController.cancelProject);
         post(Path.Web.OFFER_CANDIDATE, IndexController.offerCandidate);
+        post(Path.Web.REJECT_CANDIDATE, IndexController.rejectCandidate);
     }
 }

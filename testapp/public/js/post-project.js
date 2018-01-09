@@ -15,7 +15,8 @@ $(document).ready(function() {
             },
             success: function() { 
                 // bootbox.alert("Post project success.");
-                window.location = 'localhost:8080';
+                //window.location = 'localhost:8080';
+                location.reload();
             },
             error: function() {
 

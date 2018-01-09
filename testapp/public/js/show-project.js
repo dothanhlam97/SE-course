@@ -48,4 +48,20 @@ $(document).ready(function () {
             }
         });
     });
+    $('.btn-reject').on("click", function() { 
+        var id_project = this.id.split('-')[1];
+        $.ajax({
+            url: '/reject-candidate',
+            type: 'post',
+            data: {
+                "id-join-project": id_project,
+            },
+            success: function(){ 
+                location.reload();
+            },
+            error: function() { 
+                console.log('bb');
+            }
+        });
+    });
 });

@@ -158,6 +158,7 @@ public class IndexController {
                 return Configs.WRONG_PASS;
             }
             // set current Account 
+            System.out.print("Set account");
             Account oAccount = new Account(arrDocument.getString("Email"), "", "", "");
             Account.setCurrentAccount(oAccount);
             return ViewUtil.sendJsonContent(request, response, arrResponse);
