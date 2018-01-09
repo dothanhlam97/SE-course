@@ -13,12 +13,16 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
 import com.mongodb.BasicDBObject;
+import org.bson.types.ObjectId;
 import static com.mongodb.client.model.Filters.*;
 import static com.mongodb.client.model.Updates.*;
 
 import org.json.simple.JSONObject;
 import java.util.List;
-import java.util.ArrayList;;
+import java.util.ArrayList;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public class IndexController {
     public static Route getIndex = (Request request, Response response) -> { 
@@ -271,21 +275,17 @@ public class IndexController {
             String current_account = arrDocument.getString("Email");          
             collection = database.getCollection("project");
             MongoCollection<Document> collection2 = database.getCollection("join-project");
-            FindIterable<Document> arrDocument_ = collection.find();
+            FindIterable<Document> arrDocument_ = collection2.find(eq("Email", currentAccount));
             List <JSONObject> project = new ArrayList<JSONObject>();
             for (Document document : arrDocument_) {
                 if (document != null) {
                     JSONObject json = new JSONObject(document);
-                    BasicDBObject andQuery = new BasicDBObject();
-                    List<BasicDBObject> obj = new ArrayList<BasicDBObject>();
-                    obj.add(new BasicDBObject("Email", currentAccount));
-                    obj.add(new BasicDBObject("id-project", json.get("_id").toString()) );
-                    andQuery.put("$and", obj);
-                    if (collection2.find(andQuery).first() != null) 
-                        json.put("check", true); 
-                    else 
-                        json.put("check", false);
                     project.add(json);
+                    ObjectId objId = new ObjectId(json.get("id-project").toString());
+                    arrDocument = collection.find(eq("_id", objId)).first();
+                    if (arrDocument != null) {
+                        json.put("company", arrDocument.getString("name"));
+                    }
                 }
             }
             arrData.put("project", project);
@@ -310,8 +310,13 @@ public class IndexController {
             };
             String current_account = arrDocument.getString("Email");
             collection = database.getCollection("join-project");
+            
+            DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+            Date date = new Date();
+            System.out.println(dateFormat.format(date));
+            
             Document document = Document.parse(
-            "{\"Email\":\""+ current_account +"\", \"id-project\" : \""+ request.queryParams("id_project") +"\"}");
+            "{\"Email\":\""+ current_account +"\"," +  "\"Date\":\""+ dateFormat.format(date) +"\"," + "\"id-project\" : \""+ request.queryParams("id_project") +"\"}");
             collection.insertOne(document);
             return ViewUtil.sendJsonContent(request, response, arrResponse);
 

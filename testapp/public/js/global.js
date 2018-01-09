@@ -6,6 +6,7 @@ $(document).ready(function() {
             type: "post", 
             data: {},
             success: function() { 
+                location.reload();
             },
             error: function() { 
 

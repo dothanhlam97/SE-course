@@ -54,7 +54,7 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function () {
-                window.location.href = 'http://localhost:8080';
+                // window.location.href = 'http://localhost:8080';
             },
             error: function (err) {
                 if (err.responseText === 'FAIL_EMAIL') {

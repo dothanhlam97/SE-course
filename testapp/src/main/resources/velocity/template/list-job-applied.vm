@@ -24,7 +24,7 @@
                         <th>
                             <i class="fa fa-briefcase"></i> Project Name </th>
                         <th class="hidden-xs">
-                            <i class="fa fa-user"></i> Date </th>
+                            <i class="fa fa-user"></i> Date (MM/DD/YYYY) </th>
                         <th>
                             <i class="fa fa-shopping-cart"></i> Status </th>
                         <th> 
@@ -33,54 +33,21 @@
                     </tr>
                 </thead>
                 <tbody>
+                #foreach( $item in $project )
                     <tr>
                         <td class="highlight">
                             <div class="success"></div>
-                            <a href="javascript:;"> RedBull </a>
+                            <div style="color: #4f4e4f; font-family: Lato; margin-left: 10px;"> $item["company"] </div>
                         </td>
-                        <td class="hidden-xs"> Mike Nilson </td>
-                        <td> 2560.60$ </td>
+                        <td class="hidden-xs"> $item["Date"] </td>
+                        <td style="color: #66b2d8"> Pending </td>
                         <td>
-                            <a href="javascript:;" class="btn btn-outline btn-circle btn-sm purple">
-                                <i class="fa fa-edit"></i> Edit </a>
+                            <button class="btn btn-red btn-outline btn-circle btn-sm purple">
+                                Cancel 
+                            </a>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="highlight">
-                            <div class="info"> </div>
-                            <a href="javascript:;"> Google </a>
-                        </td>
-                        <td class="hidden-xs"> Adam Larson </td>
-                        <td> 560.60$ </td>
-                        <td>
-                            <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                <i class="fa fa-trash-o"></i> Delete </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="highlight">
-                            <div class="success"> </div>
-                            <a href="javascript:;"> Apple </a>
-                        </td>
-                        <td class="hidden-xs"> Daniel Kim </td>
-                        <td> 3460.60$ </td>
-                        <td>
-                            <a href="javascript:;" class="btn btn-outline btn-circle green btn-sm purple">
-                                <i class="fa fa-edit"></i> Edit </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="highlight">
-                            <div class="warning"> </div>
-                            <a href="javascript:;"> Microsoft </a>
-                        </td>
-                        <td class="hidden-xs"> Nick </td>
-                        <td> 2560.60$ </td>
-                        <td>
-                            <a href="javascript:;" class="btn btn-outline btn-circle red btn-sm blue">
-                                <i class="fa fa-share"></i> Share </a>
-                        </td>
-                    </tr>
+                #end
                 </tbody>
             </table>
         </div>
