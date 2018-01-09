@@ -11,8 +11,6 @@
       <span class="header-button" style="font-weight: bold; color: black;"> Hire Freelancer </span>
       <span class="header-button" style="font-weight: bold; color: black;"> Find Work </span>
       #end
-
-    $is_hire $is_work
     </div>
     #if ($current_account == "")
     <div class="col-md-5 pull-right group">

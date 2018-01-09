@@ -42,12 +42,20 @@
                         <td class="hidden-xs"> <a href="" style="font-family: Lato;"> $item["Email"] </a> </td>
                         <td> $item["Date"] </td>
                         <td>
+                            #if ($item["status"]) 
+                                #if ($item["status"] == "offer")
+                                    <div style="color: #337ab7"> Offered </div>
+                                #else 
+                                    <div style="color: #ee7070"> Offered </div>
+                                #end
+                            #else
                             <button id="offer-$item["_id"]" style="width: 40px; margin: 5px;" class="btn btn-blue btn-outline btn-circle btn-sm purple btn-offer">
                                 Offer 
                             </a>
                             <button id="reject-$item["_id"]" style="width: 40px; margin: 5px;" class="btn btn-red btn-outline btn-circle btn-sm purple btn-reject">
                                 Reject 
                             </a>
+                            #end
                         </td>
                     </tr>
                 #end

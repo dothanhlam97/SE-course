@@ -27,6 +27,6 @@ public class Path {
         public final static String PROFILE = "velocity/template/profile.vm";
         public final static String SHOW_PROJECT = "velocity/template/show-project.vm";
         public final static String FREELANCER_APPLIED = "velocity/template/list-freelancer-applied.vm";
-        public final static String JOB_APPLIED = "velocity/template/list-freelancer-applied.vm";
+        public final static String JOB_APPLIED = "velocity/template/list-job-applied.vm";
     }
 }
