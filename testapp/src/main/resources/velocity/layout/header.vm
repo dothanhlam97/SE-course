@@ -1,46 +1,48 @@
-<div class="header-block row" style="margin: 0 15px;">
-  <div class="col-md-2">
-    <a href="$host_url/" target="_blank" >
-      <img src="$host_url/images/logo.svg" style="margin-top: 10%; height: 50%;">
-    </a>
-  </div>
-  
-  <div class="col-md-5 pull-left group" style="margin-top: 15px;">
-    #if ($current_account == "")
-    <span class="header-button" style="font-weight: bold; color: black;"> Hire Freelancer </span>
-    <span class="header-button" style="font-weight: bold; color: black;"> Find Work </span>
-    #end
-
-  $is_hire $is_work
-  </div>
-  #if ($current_account == "")
-  <div class="col-md-5 pull-right group">
-    <a class="header-button" href="$host_url/login"
-    style="text-decoration: none;"> Login </a>
-    <a class="header-button" href="$host_url/sign-up"
-    style="text-decoration: none;"> Sign up </a>
-    <a href="$host_url/post-project">
-      <button class="btn btn-blue">
-        Post your project
-      </button>
-    </a>
-  </div>
-  #else 
-  <div class="col-md-5 pull-right group" style="margin-top: 15px;">
-    <div class="dropdown">
-      <span class="dropdown-toggle header-button" style="font-weight: bold; color: black;" data-toggle="dropdown">  $current_account </span>
-      <ul class="dropdown-menu" style="margin-left: 75%; width: 25%; font-size: 12px; color: black">
-        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"  > <a href="$host_url/profile">Profile </a> </li>
-        #if ($is_work == "true")
-        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> <a href="$host_url/show-project">Find work </a></li>
-        #else 
-        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> 
-        <a href="$host_url/post-project">Post your project </a></li>
-        <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Hire freelancer </li>
-        #end
-        <li id="btn-log-out" class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Log out</li>
-      </ul>
+<div class="header-block">
+  <div class="header-block row relative-width" style="margin: auto;">
+    <div class="col-md-2">
+      <a href="$host_url/" target="_blank" >
+        <img src="$host_url/images/logo.svg" style="margin-top: 10%; height: 50%;">
+      </a>
     </div>
+    
+    <div class="col-md-5 pull-left group" style="margin-top: 15px;">
+      #if ($current_account == "")
+      <span class="header-button" style="font-weight: bold; color: black;"> Hire Freelancer </span>
+      <span class="header-button" style="font-weight: bold; color: black;"> Find Work </span>
+      #end
+
+    $is_hire $is_work
+    </div>
+    #if ($current_account == "")
+    <div class="col-md-5 pull-right group">
+      <a class="header-button" href="$host_url/login"
+      style="text-decoration: none;"> Login </a>
+      <a class="header-button" href="$host_url/sign-up"
+      style="text-decoration: none;"> Sign up </a>
+      <a href="$host_url/post-project">
+        <button class="btn btn-blue">
+          Post your project
+        </button>
+      </a>
+    </div>
+    #else 
+    <div class="col-md-5 pull-right group" style="margin-top: 15px;">
+      <div class="dropdown">
+        <span class="dropdown-toggle header-button" style="font-weight: bold; color: black;" data-toggle="dropdown">  $current_account </span>
+        <ul class="dropdown-menu" style="margin-left: 75%; width: 25%; font-size: 12px; color: black">
+          <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"  > <a href="$host_url/profile">Profile </a> </li>
+          #if ($is_work == "true")
+          <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> <a href="$host_url/show-project">Find work </a></li>
+          #else 
+          <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> 
+          <a href="$host_url/post-project">Post your project </a></li>
+          <li class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Hire freelancer </li>
+          #end
+          <li id="btn-log-out" class="header-button" style="margin-left: 10%; margin-bottom: 5%;"> Log out</li>
+        </ul>
+      </div>
+    </div>
+    #end
   </div>
-  #end
 </div>

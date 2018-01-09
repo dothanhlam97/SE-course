@@ -251,6 +251,52 @@ public class IndexController {
             return null;
         }
     }; 
+    public static Route showListJobApplied = (Request request, Response response) -> {
+        try {
+            Map<String, Object> arrData = new HashMap<String, Object>();
+            arrData.put("host_url", Configs.getInstance().prefs.node("global").get("host_url", "fail to load"));
+            MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+            String currentAccount = Account.getCurrentAccount();
+            MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+            if (arrDocument != null) {
+                arrData.put("current_account", arrDocument.getString("Email"));
+                arrData.put("is_hire", arrDocument.getString("isHire"));
+                arrData.put("is_work", arrDocument.getString("isWork"));
+            } else {
+                arrData.put("current_account", "");
+                arrData.put("is_hire", "true");
+                arrData.put("is_work", "true");
+            } 
+            String current_account = arrDocument.getString("Email");          
+            collection = database.getCollection("project");
+            MongoCollection<Document> collection2 = database.getCollection("join-project");
+            FindIterable<Document> arrDocument_ = collection.find();
+            List <JSONObject> project = new ArrayList<JSONObject>();
+            for (Document document : arrDocument_) {
+                if (document != null) {
+                    JSONObject json = new JSONObject(document);
+                    BasicDBObject andQuery = new BasicDBObject();
+                    List<BasicDBObject> obj = new ArrayList<BasicDBObject>();
+                    obj.add(new BasicDBObject("Email", currentAccount));
+                    obj.add(new BasicDBObject("id-project", json.get("_id").toString()) );
+                    andQuery.put("$and", obj);
+                    if (collection2.find(andQuery).first() != null) 
+                        json.put("check", true); 
+                    else 
+                        json.put("check", false);
+                    project.add(json);
+                }
+            }
+            arrData.put("project", project);
+            return ViewUtil.sendUtf8HtmlContent(request, response,
+                    ViewUtil.render(request, arrData, Path.Template.JOB_APPLIED));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }; 
 
     public static Route joinProject = (Request request, Response response) -> {
         try {

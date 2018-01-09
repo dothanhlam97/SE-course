@@ -24,12 +24,66 @@
                         <button class="btn btn-blue" style="fon-size: 15px; text-transform: uppercase;"><a>I want to hire</a></button>
                     </a>
                     #else
-                        <button class="btn btn-blue-outline" style="font-size: 15px; text-transform: uppercase;"><a>I want to work</a></button>
+                        <button class="btn btn-blue-outline" style="font-size: 15px; text-transform: uppercase;"><a href="$host_url/show-project">I want to work</a></button>
                     #end 
                     #end
                 </div>
             </div>
         </div>
     </div>
+    <section class="HomepageIntro SectionFeature PageHome-intro" data-uitest-target="homepage-intro">
+        <div class="Container">
+            <div class="Grid Grid--verticalCenter row">
+                <div style="font-size: 18px; text-align: justify;" class="col-md-8 SectionFeature-content Grid-col Grid-col--desktopSmall-6">
+                    <h2 style="padding: 5% 0; color: #35b2fe;" class="HomepageIntro-title">Need work done?</h2>
+                    <p>
+                        Post your project and receive competitive bids from freelancers within minutes.
+                        Our reputation system will make it easy to find the perfect freelancer for your job.
+                        It's the simplest and safest way to get work done online.
+                    </p>
+                    <p>
+                        We have millions of Freelancers for thousands of freelance jobs:
+                        from web design, mobile app development, virtual assistants, product manufacturing and graphic design.
+                        Whatever your needs, there will be a freelancer to get it done.
+                    </p>
+                    <h3 style="padding: 5% 0; color: #35b2fe;" class="HomepageIntro-title">How do you benefit?</h3>
+                    <ul class="HomepageIntro-points">
+                        <li class="HomepageIntro-points-item">
+                            <i style="margin-right: 15px; color: #35b2fe; font-size: 30px;" class="fa fa-check-square-o"> </i>
+                            You’ll receive bids for free from our talented freelancers within seconds.
+                        </li>
+                        <li class="HomepageIntro-points-item">
+                        <i style="margin-right: 15px; color: #35b2fe; font-size: 30px;" class="fa fa-check-square-o"> </i>
+                            Keeping up-to-date with our 24/7 support, time tracker, and mobile app.
+                        </li>
+                        <li class="HomepageIntro-points-item">
+                        <i style="margin-right: 15px; color: #35b2fe; font-size: 30px;" class="fa fa-check-square-o"> </i>
+                            Chat for free.
+                        </li>
+                        <li class="HomepageIntro-points-item">
+                        <i style="margin-right: 15px; color: #35b2fe; font-size: 30px;" class="fa fa-check-square-o"> </i>
+                            Browse samples of previous work.
+                        </li>
+                        <li class="HomepageIntro-points-item">
+                        <i style="margin-right: 15px; color: #35b2fe; font-size: 30px;" class="fa fa-check-square-o"> </i>
+                                Only pay for the work when it is completed in a safe and secure manner.
+                            Release your payment when you are 100% satisfied with the work provided.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 SectionFeature-content Grid-col Grid-col--desktopSmall-6" data-qtsb-section="HomepageAnimation">
+                    <a href="/post-project" class="banner-hire" data-qtsb-label="ShowHireSplash">
+                        <div class="HomepageIntro-animation">
+                            <video autoplay="" loop="" class="HomepageIntro-animation-image">
+                                <source src="https://www.f-cdn.com/assets/video/homepage/homepage-de21e73d.mp4" type="video/mp4">
+                                <img src="https://www.f-cdn.com/assets/img/homepage/homepage-5007a0ea.png" alt="how to get work done on freelancer!">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 #end

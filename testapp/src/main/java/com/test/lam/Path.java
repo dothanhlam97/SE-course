@@ -13,6 +13,7 @@ public class Path {
         public static final String POST_PROJECT = "/post-one-project";
         public static final String SHOW_PROJECT = "/show-project";
         public static final String JOIN_PROJECT = "/join-a-job";
+        public static final String JOB_APPLIED = "/list-job-applied";
     }
 
     public static class Template {
@@ -22,5 +23,6 @@ public class Path {
         public final static String POST_PROJECT_PAGE = "velocity/template/post-project.vm";
         public final static String PROFILE = "velocity/template/profile.vm";
         public final static String SHOW_PROJECT = "velocity/template/show-project.vm";
+        public final static String JOB_APPLIED = "velocity/template/list-job-applied.vm";
     }
 }

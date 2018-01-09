@@ -1249,3 +1249,208 @@ element.style {}
     font-size: 12px;
     color: #484747;
 }
+
+.SectionFeature {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.Container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+.Grid--verticalCenter {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.Grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin: 0 -8px;
+}
+
+.SectionFeature-content {
+    position: relative;
+}
+
+.Grid-col {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 8px;
+}
+
+.HomepageIntro-title {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 1.37;
+}
+
+.HomepageIntro-title 
+.HomepageIntro-title {
+    margin-bottom: 5%;
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 1.37;
+    padding-top: 5%;
+    color: #35b2fe;
+    font-family: Lato!important;
+}
+
+.main-content p {
+    line-height: inherit;
+}
+
+.main-content p {
+    line-height: inherit;
+}
+
+.PageHome-intro,
+.PageHome-intro body,
+.PageHome-intro p,
+.PageHome-intro div,
+.PageHome-intro  .dropdown-menu {
+    font-family: Lato!important;
+}
+
+.HomepageIntro-points-item {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.HomepageIntro-points {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.table-scrollable {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid #e7ecf1;
+    margin: 10px 0!important;
+}
+
+.table-scrollable>.table {
+    width: 100%!important;
+    margin: 0!important;
+    background-color: #fff;
+}
+
+.DTS .table-scrollable,
+.table-scrollable.table-scrollable-borderless,
+.table-scrollable>.table-bordered {
+    border: 0;
+}
+
+.table-advance thead {
+    color: #3f444a;
+}
+
+[class*=" fa-"]:not(.fa-stack),
+[class*=" glyphicon-"],
+[class*=" icon-"],
+[class^=fa-]:not(.fa-stack),
+[class^=glyphicon-],
+[class^=icon-] {
+    display: inline-block;
+    line-height: 14px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.table-advance thead tr th {
+    background-color: #f1f4f7;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3f444a;
+}
+
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857;
+    vertical-align: top;
+    border-top: 1px solid #e7ecf1;
+}
+
+.table-bordered,
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border: 1px solid #e7ecf1;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #e7ecf1;
+}
+
+.table-advance div.danger,
+.table-advance div.important,
+.table-advance div.info,
+.table-advance div.success,
+.table-advance div.warning {
+    position: absolute;
+    margin-top: -5px;
+    float: left;
+    width: 2px;
+    height: 30px;
+    margin-right: 20px!important;
+}
+
+.table-advance td.highlight div.success {
+    border-left: 2px solid #36c6d3;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857;
+    vertical-align: top;
+    border-top: 1px solid #e7ecf1;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

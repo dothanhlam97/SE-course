@@ -9,7 +9,7 @@ $(document).ready(function () {
                 "id_project": id_project
             },
             success: function(){ 
-                console.log('aa'); 
+                location.reload();
             },
             error: function() { 
                 console.log('bb');
