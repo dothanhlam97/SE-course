@@ -397,4 +397,51 @@ public class IndexController {
             return null;
         }
     };
+
+    public static Route offerCandidate = (Request request, Response response) -> {
+        try {
+            Map<String, Object> arrResponse = new HashMap<String, Object>();
+            MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+            String currentAccount = Account.getCurrentAccount();
+            MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+            if (arrDocument == null) {
+                return ViewUtil.sendJsonContent(request, response, arrResponse);
+            }
+            ;
+
+            collection = database.getCollection("join-project");
+            ObjectId objId = new ObjectId(request.queryParams("id-join-project"));
+            arrDocument = collection.find(eq("_id", objId)).first();
+            collection.updateOne(arrDocument, set("status", "offer"));
+            return ViewUtil.sendJsonContent(request, response, arrResponse);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    };
+
+    public static Route rejectCandidate = (Request request, Response response) -> {
+        try {
+            Map<String, Object> arrResponse = new HashMap<String, Object>();
+            MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+            String currentAccount = Account.getCurrentAccount();
+            MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+            if (arrDocument == null) {
+                return ViewUtil.sendJsonContent(request, response, arrResponse);
+            }
+
+            collection = database.getCollection("join-project");
+            ObjectId objId = new ObjectId(request.queryParams("id-join-project"));
+            arrDocument = collection.find(eq("_id", objId)).first();
+            collection.updateOne(arrDocument, set("status", "reject"));
+            return ViewUtil.sendJsonContent(request, response, arrResponse);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    };
 }

@@ -42,11 +42,11 @@
                         <td class="hidden-xs"> <a href="" style="font-family: Lato;"> $item["Email"] </a> </td>
                         <td> $item["Date"] </td>
                         <td>
-                            <button style="width: 40px; margin: 5px;" class="btn btn-blue btn-outline btn-circle btn-sm purple">
+                            <button id="offer-$item["_id"]" style="width: 40px; margin: 5px;" class="btn btn-blue btn-outline btn-circle btn-sm purple btn-offer">
                                 Offer 
                             </a>
-                            <button style="width: 40px; margin: 5px;" class="btn btn-red btn-outline btn-circle btn-sm purple">
-                                Cancel 
+                            <button id="reject-$item["_id"]" style="width: 40px; margin: 5px;" class="btn btn-red btn-outline btn-circle btn-sm purple btn-reject">
+                                Reject 
                             </a>
                         </td>
                     </tr>

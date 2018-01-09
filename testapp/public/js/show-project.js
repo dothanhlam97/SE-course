@@ -32,4 +32,20 @@ $(document).ready(function () {
             }
         });
     });
+    $('.btn-offer').on("click", function() { 
+        var id_project = this.id.split('-')[1];
+        $.ajax({
+            url: '/offer-candidate',
+            type: 'post',
+            data: {
+                "id-join-project": id_project,
+            },
+            success: function(){ 
+                location.reload();
+            },
+            error: function() { 
+                console.log('bb');
+            }
+        });
+    });
 });

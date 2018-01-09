@@ -39,5 +39,6 @@ public class App
         get(Path.Web.FREELANCER_APPLIED, IndexController.showListFreelancerApplied);
         post(Path.Web.JOIN_PROJECT, IndexController.joinProject);
         post(Path.Web.CANCEL_PROJECT, IndexController.cancelProject);
+        post(Path.Web.OFFER_CANDIDATE, IndexController.offerCandidate);
     }
 }

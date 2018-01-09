@@ -16,6 +16,7 @@ public class Path {
         public static final String CANCEL_PROJECT = "/cancel-a-job";
         public static final String JOB_APPLIED = "/list-job-applied";
         public static final String FREELANCER_APPLIED = "/list-freelancer-applied";
+        public static final String OFFER_CANDIDATE = "/offer-candidate";
     }
 
     public static class Template {
