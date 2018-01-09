@@ -37,5 +37,6 @@ public class App
         get(Path.Web.SHOW_PROJECT, IndexController.showListProject);
         get(Path.Web.JOB_APPLIED, IndexController.showListJobApplied);
         post(Path.Web.JOIN_PROJECT, IndexController.joinProject);
+        post(Path.Web.CANCEL_PROJECT, IndexController.cancelProject);
     }
 }

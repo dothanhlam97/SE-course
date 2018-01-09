@@ -13,6 +13,7 @@ public class Path {
         public static final String POST_PROJECT = "/post-one-project";
         public static final String SHOW_PROJECT = "/show-project";
         public static final String JOIN_PROJECT = "/join-a-job";
+        public static final String CANCEL_PROJECT = "/cancel-a-job";
         public static final String JOB_APPLIED = "/list-job-applied";
     }
 

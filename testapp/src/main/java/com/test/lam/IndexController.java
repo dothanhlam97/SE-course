@@ -320,4 +320,32 @@ public class IndexController {
             return null;
         }
     };
+
+    public static Route cancelProject = (Request request, Response response) -> {
+        try {
+            Map<String, Object> arrResponse = new HashMap<String, Object>();
+            MongoDatabase database = MongoDb.getInstance().getClient().getDatabase("MyTest");
+            String currentAccount = Account.getCurrentAccount();
+            MongoCollection<Document> collection = database.getCollection("accounts");
+            Document arrDocument = collection.find(eq("Email", currentAccount)).first();
+            if (arrDocument == null) {
+                return ViewUtil.sendJsonContent(request, response, arrResponse);
+            };
+            String current_account = arrDocument.getString("Email");
+            collection = database.getCollection("join-project");
+
+            BasicDBObject andQuery = new BasicDBObject();
+            List<BasicDBObject> obj = new ArrayList<BasicDBObject>();
+            obj.add(new BasicDBObject("Email", currentAccount));
+            obj.add(new BasicDBObject("id-project", request.queryParams("id_project")));
+            andQuery.put("$and", obj);
+
+            collection.deleteMany(andQuery);
+            return ViewUtil.sendJsonContent(request, response, arrResponse);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    };
 }
