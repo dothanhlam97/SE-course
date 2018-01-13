@@ -3,7 +3,7 @@
 <div class="container-fluid padd-no login-background" style="height: calc(100vh - 50px);">
     <div class="relative-width height-full">
         <div class="middle-div" style="height: 80%;">
-            <div style="background-color: #fff; width: 30%; margin: auto; border: 1px solid lightgrey; 
+            <div style="background-color: #fff; width: 25%; margin: auto; border: 1px solid lightgrey; 
             border-radius: 7px!important; padding: 2% 0;">
                 <h1 style="font-family: Pacifico; font-size: calc(3vw +  8px); text-align: center; 
                 margin-bottom: 10%;">Log in!</h1>

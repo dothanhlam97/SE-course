@@ -37,30 +37,13 @@ public class ViewUtil {
 
     private static VelocityTemplateEngine strictVelocityEngine() {
         VelocityEngine configuredEngine = new VelocityEngine();
-        // configuredEngine.setProperty("userdirective",
-        //         "com.googlecode.htmlcompressor.velocity.HtmlCompressorDirective,"
-        //                 + "com.googlecode.htmlcompressor.velocity.XmlCompressorDirective,"
-        //                 + "com.googlecode.htmlcompressor.velocity.JavaScriptCompressorDirective,"
-        //                 + "com.googlecode.htmlcompressor.velocity.CssCompressorDirective");
         configuredEngine.setProperty("runtime.log.logsystem.class", "org.apache.velocity.runtime.log.Log4JLogChute");
         configuredEngine.setProperty(VelocityEngine.RUNTIME_LOG, "logs/velocity.log");
         configuredEngine.setProperty("resource.loader", "class");
         configuredEngine.setProperty("class.resource.loader.class",
                 "org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
-        // configuredEngine.setProperty("velocimacro.library", "VM_global_library.vm");
         configuredEngine.setProperty("input.encoding", "UTF-8");
         configuredEngine.setProperty("parser.pool.size", 32);
-        // System.out.print(oConfigs.prefs.node("global"));
-        // if (oConfigs.prefs.node("global").getBoolean("debug", false) == true) {
-        //     configuredEngine.setProperty("velocimacro.library.autoreload", "true");
-        //     configuredEngine.setProperty("runtime.references.strict", true);
-        //     configuredEngine.setProperty("file.resource.loader.cache", false);
-        // } else {
-        //     configuredEngine.setProperty("classpath.resource.loader.cache", "true");
-        //     configuredEngine.setProperty("velocimacro.library.autoreload", "false");
-        //     configuredEngine.setProperty("file.resource.loader.cache", true);
-        //     configuredEngine.setProperty("file.resource.loader.modificationCheckInterval", -1);
-        // }
         return new VelocityTemplateEngine(configuredEngine);
     }
 

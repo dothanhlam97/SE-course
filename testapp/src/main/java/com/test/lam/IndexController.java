@@ -243,13 +243,14 @@ public class IndexController {
                     Document newDoc = collection2.find(andQuery).first();
                     if (newDoc != null) { 
                         JSONObject new_json = new JSONObject(newDoc);
-                        json.put("status", new_json.get("status").toString());
+                        if (new_json.get("status") != null) 
+                            json.put("status", new_json.get("status").toString());
                         json.put("check", true); 
                     }
                     else 
                         json.put("check", false);
                     project.add(json);
-                }
+            }                                   
             }
             arrData.put("project", project);
             return ViewUtil.sendUtf8HtmlContent(request, response,
